@@ -6,3 +6,117 @@ html,
 body {
 	font-family: 'Lato', sans-serif;
 }
+
+.App {}
+.container{
+	max-height: 100%;
+	/* border: 2px solid green; */
+}
+
+/* --------------------------Navbar----------------------------------------------------------------------- */
+.nav {
+	border: 3px solid black;
+	width: 1318px;
+	height: 150.02px;
+	margin: 10px 40px 0 82px;
+	font-size: 19px;
+	line-height: 20px;
+	font-weight: 700;
+}
+
+.nav__row {
+	display: flex;
+	/* border: 3px solid yellow; */
+	justify-content: space-between;
+	height: 100%;
+}
+
+.logo {}
+
+.nav__logo {
+	margin-right: 181px;
+	/* border: 2px solid blue; */
+	/* margin: 0; */
+	/* max-height: 150px; */
+}
+
+.logo__img {
+	/* max-height: 147px; */
+
+}
+
+.list {
+	display: flex;
+	/* border: 3px solid black; */
+	justify-content: center;
+	align-items: center;
+	height: 36px;
+	margin-top: 15.5px;
+}
+
+.nav__list-links {
+	width: 614px;
+	gap: 15px;
+	/* border: 2px solid blue; */
+}
+
+.nav__list-links:not(:last-child) {
+	/* gap: 15px; */
+}
+
+.list__item {}
+
+.list-clients {
+	display: flex;
+	/* border: 1px solid black; */
+}
+.list-clients__item {}
+
+.list-clients__item-icon {
+	/* border: 2px solid green; */
+	padding-left: 6px;
+}
+
+.list-services {
+	display: flex;
+}
+
+.list-services__item{}
+
+.list-services__item-icon {
+	/* border: 2px solid green; */
+	padding-left: 6px;
+}
+
+.nav__list-info{}
+.list__item-info{
+	/* border: 2px solid yellow; */
+}
+.list-contacts {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+.list-contacts__number {
+	font-size: 16px;
+}
+.list-contacts__address {
+	font-size: 11px;
+	font-weight: 400;
+}
+
+.nav-button {
+	height: 36px;
+	margin-top: 15.5px;
+}
+
+.nuv-button__entry {
+	width: 140px;
+	height: 39px;
+	/* border: 2px solid green; */
+	border-radius: 40px;
+	background: linear-gradient(154deg, #F07E00 0%, #F46353 100%);
+	color: #FFF;
+	font-size: 16px;
+}
+/* --------------------------Navbar----------------------------------------------------------------------- */
