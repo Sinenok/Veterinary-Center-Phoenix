@@ -13,7 +13,7 @@ function ContactPage() {
         <p>e-mail: fenix@vetfenix.ru</p>
         <p>с 10-00 до 22-00 каждый день</p>
       </div>
-      <img src={vk} alt="Logo" className="logo" />
+      <img src={vk} alt="Logo" className="logo_vk" />
     </div>
   
     <div className="block" id="block2">
