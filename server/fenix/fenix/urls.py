@@ -15,10 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path, re_path
 from fenixapp import views
 
 urlpatterns = [
-    path('', views.index, name="home")
+    path('', views.index, name="home"),
+    re_path(r"price_list",views.price_list)
 ]

@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <PriseList></PriseList>   
+      {/* <ContactPage></ContactPage> */}
     </div>
   );
 }

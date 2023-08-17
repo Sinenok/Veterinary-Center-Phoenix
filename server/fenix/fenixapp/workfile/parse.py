@@ -2,8 +2,8 @@ import pandas as pd
 import csv
 import json
 
-def parse():
-    xlsx_file = 'Preyskurant_Fenix_Oktyabr_2022.xlsx'
+def parse(url):
+    xlsx_file = url
     df = pd.read_excel(xlsx_file)
     csv_file = 'new.csv'
     df.to_csv(csv_file, index=False)
@@ -36,3 +36,5 @@ def parse():
 
     with open('data.json', 'w', encoding='utf-8') as file:
         json.dump(result, file, ensure_ascii=False)
+
+    return result

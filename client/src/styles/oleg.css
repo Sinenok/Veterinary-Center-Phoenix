@@ -1,0 +1,188 @@
+.service-block {
+    position: relative; 
+
+    margin-left: 5%;
+    width: 90%;
+    min-height: 83px;
+   
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    
+    text-align: left;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: #B2664C;
+  }
+  .service-name{
+    margin-top: 22px;
+    font-family: 'Open Sans';
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .expand-icon {
+    margin-right: 10px;
+    width: 15px;
+    transform-origin: center;
+    transition: transform 0.2s ease;
+  }
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Open Sans';
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+  
+  .price-table th,
+  .price-table td {
+    /* border: 1px solid #ccc; */
+    padding: 8px;
+    /* background-color: #fafafa;*/
+  }
+  .price-table th{
+    /* background-color: #F9FBFC; */
+    /* font-family: "Lato"; */
+    font-weight: 600;
+  }
+
+  .price-table tr{
+    border-bottom: 1px solid #ccc;
+  }
+  .price-table tr:last-child{
+    border-bottom: none;
+  }
+  .price-table tr:first-child{
+    background-color: #F9FBFC;
+  }
+  .price-table th:first-child,
+.price-table td:first-child {
+  border-top-left-radius: 9px;
+}
+
+.price-table th:last-child,
+.price-table td:last-child {
+  border-top-right-radius: 9px;
+}
+
+  .service-block .services-content {
+   display: block;
+   margin-top: 1vh;
+   margin-left: 1%;
+   margin-right: 1%;
+   top: 100%;
+   left: 0; 
+   /* width: 100%; */
+   background-color: #fff; 
+   border: 1px solid #ccc;
+   border-radius: 10px;
+
+  }
+  
+  .service-block.expanded .services-content {
+    display: block;
+}
+.wrapper-services{
+    min-height: auto;
+}
+
+/* .ContactPage{
+    display: flex;
+} */
+.flex-container{
+    min-width: 600px;
+}
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+  }
+  
+  #block1,
+  #block2 {
+    flex: 1;
+    margin: 10px;
+    border-radius: 22px;
+    border: 1px solid #F07E00;
+  }
+  
+  #block3 {
+    flex: 2;
+    margin: 10px;
+    border-radius: 22px;
+    border: 1px solid #F07E00;
+  }
+  
+  .block {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .text {
+    margin: 10px;
+    
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+  .text>p{
+    margin: 10px;
+    flex-grow: 1;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+
+  }
+  
+  .logo_vk {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  .photo {
+    background-size: cover;
+  }
+  
+  /* .form {
+    margin: 10px;
+    display: flex;
+  flex-direction: column;
+  margin: 0;
+  } */
+  
+  /* .input {
+    border: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+  } */
+  
+  /* .button {
+    width: 268px;
+    color: white;
+    padding: 13px 28px;
+    border-radius: 40px;
+    background: linear-gradient(105.82deg, #F07E00 30.52%, #F46353 83.36%);
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 500;
+    
+    font-family: Lato;
+    letter-spacing: 0em;
+    text-align: center;
+    
+  } */
