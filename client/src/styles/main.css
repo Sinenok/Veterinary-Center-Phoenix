@@ -2209,6 +2209,11 @@ body {
   /* border: 2px solid orange; */
   margin-top: auto;
 }
+@media (max-width: 750px) {
+  .footer {
+    background: #f07e00;
+  }
+}
 .footer__wrapper {
   display: flex;
   flex-direction: column;
@@ -2224,6 +2229,11 @@ body {
   width: 100%;
   margin-bottom: 38px;
 }
+@media (max-width: 750px) {
+  .f-links{
+    margin-top: 25px;
+  }
+}
 .f-links__item > a {
   color: #000;
   font-family: "Inter", sans-serif;
@@ -2236,5 +2246,13 @@ body {
   color: #4a4a4a;
   font-family: "Lato", sans-serif;
   font-size: 12px;
+}
+@media (max-width: 750px) {
+  .f-links__item > a {
+    color: #fff;
+  }
+  .footer__privacy-policy > a {
+    color: #fff;
+  }
 }
 /* --------------------------Footer----------------------------------------------------------------------- */
