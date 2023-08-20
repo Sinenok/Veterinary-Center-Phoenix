@@ -30,26 +30,42 @@ const ServiceBlock = ({ title, services, index }) => {
     );
   };
   const PriceTable = ({ services, expanded }) => {
-    console.log(expanded);
-    console.log(services);
+    // console.log(expanded);
+    // console.log(services);
     if (!expanded) {
       return null;
     }
     return (
       <table className="price-table">
-      {/* <thead>
-        <tr>
-          <th>Услуги</th>
-          <th>Единица измерения</th>
-          <th>Стоимость</th>
-        </tr>
-      </thead> */}
-      <tbody>
+      
+      {/* <tbody>
         {services[0].map((service, index) => (
+          
           <tr key={index}>
             <td>{service}</td>
             <td>{services[1][index]}</td>
             <td>{services[2][index]}</td>
+          </tr>
+        ))}
+      </tbody> */}
+      <tbody>
+        {services[0].map((service, index) => (
+         
+          <tr key={index}>
+            
+            {(services[1][index] == "" && services[2][index] == "") ? 
+            (
+                <td colSpan="3" className='subtitleth'>{service}</td>
+            ):
+            (
+                <>
+                <td>{service}</td>
+                <td>{services[1][index]}</td>
+                <td>{services[2][index]}</td>
+            </>
+            )
+            }
+            
           </tr>
         ))}
       </tbody>
