@@ -318,3 +318,67 @@
         line-height: 15px;
     }
 }
+
+
+/*--------------------------------------------------------------------------------------------------*/
+.ServicePage {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .LeftSection {
+    flex: 1;
+    padding: 10px;
+    min-width: 200px;
+    max-width: 300px;
+  }
+  
+  .CenterSection {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 20%;
+  }
+  
+  .CenterBlock {
+    flex: 1;
+    border: 1px solid #F17F01;
+    padding: 25px;
+    border-radius: 22px;
+  }
+  .CenterBlock > p{
+    margin-top: 1vh;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .CenterBlock > p:first-child{
+    margin-top: 0;
+  }
+  
+.CenterFill{
+    background-color:  #F07E00;
+   
+}
+.CenterFill > p{
+    color: #ffffff;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 32px;
+}
+.LeftSection > .LeftTitle{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+}
+.LeftSection > .LeftSubTitle{
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
