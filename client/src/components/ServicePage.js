@@ -1,12 +1,9 @@
 import React, { useEffect,useState } from 'react';
 import "./../styles/oleg.css";
 
-const PriceTable = ({ services, expanded }) => {
-    // console.log(expanded);
-    // console.log(services);
-    if (!expanded) {
-      return null;
-    }
+const PriceTable = ({ services }) => {
+     console.log(services);
+    
     return (
       <table className="price-table">
       
@@ -87,6 +84,13 @@ const PriceTable = ({ services, expanded }) => {
                     Даже ранее посещенные вместе с животным страны и континенты могут оказаться решающим фактором в постановке диагноза. Это позволит точно оценить состояние животного, что вкупе в тщательным осмотром в ряде случаев позволит поставить диагноз и назначить правильное лечение сразу на приеме с минимальными дополнительными исследованиями. Наши питомцы не могут нам сказать, где, что у них болит, давно ли началось, каков характер и сила боли, что их беспокоит... Поэтому первый разговор с врачом так важен.
                     </p>
                 </div>
+                {(data) ? (
+                    <PriceTable services = {data["Анестезия и интенсивная терапия"]} 
+                    ></PriceTable>
+                
+                ):(
+                <p>loading..</p>
+                )}
             </div>
 
         </div>
