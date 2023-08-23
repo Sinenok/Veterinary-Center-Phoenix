@@ -2,6 +2,7 @@ import React, { useEffect,useState } from 'react';
 import "./../styles/oleg.css";
 import plus from "./../img/price/plus.png"
 import minus from './../img/price/minus-sign.png'
+import HeaderBanner from "./HeaderBanner"
 
 const ServiceBlock = ({ title, services, index }) => {
     const [isExpanded, setExpanded] = useState(false);
@@ -87,68 +88,26 @@ const ServiceBlock = ({ title, services, index }) => {
             .catch(error => console.error('Ошибка при запросе:', error));
     }, []);
 
-    
-
-    const services = [
-        {
-          title: 'Педиатрия',
-          services: [
-            { name: 'Услуга 1.1', unit: 'шт', price: '100 руб' },
-            { name: 'Услуга 1.2', unit: 'шт', price: '200 руб' },
-            { name: 'Услуга 1.3', unit: 'шт', price: '150 руб' },
-          ],
-          expanded: false,
-        },
-        {
-          title: 'Вакцинация',
-          services: [
-            { name: 'Услуга 2.1', unit: 'шт', price: '50 руб' },
-            { name: 'Услуга 2.2', unit: 'шт', price: '75 руб' },
-            { name: 'Услуга 2.3', unit: 'шт', price: '120 руб' },
-          ],
-          expanded: false,
-        },
-        {
-          title: 'Стационар',
-          services: [
-            { name: 'Услуга 3.1', unit: 'сутки', price: '1000 руб' },
-            { name: 'Услуга 3.2', unit: 'сутки', price: '1500 руб' },
-            { name: 'Услуга 3.3', unit: 'сутки', price: '2000 руб' },
-          ],
-          expanded: false, 
-        },
-      ];
-  
+      const about = "Цены";
       return (
-    //     <div>
-    //   {services.map((service, index) => (
-    //     <div key={index} className='wrapper-services'>
-    //       <ServiceBlock
-    //         title={service.title}
-    //         services={service.services}
-    //         index={index}
-    //       />
-    //       {service.expanded && service.services.length > 0 && (
-    //         <PriceTable services={service.services}  />
-    //       )}
-    //     </div>
-    //   ))}
-    // </div>
     <div>
-      {data &&
-        Object.entries(data).map(([category, serviceArray], index) => (
-        
-          <div key={index} className='wrapper-services'>
-            <ServiceBlock
-              title={category}
-              services={serviceArray}
-              index={index}
-            />
-            {serviceArray[2] && serviceArray[0].length > 0 && (
-              <PriceTable services={serviceArray[0]} />
-            )}
+        <HeaderBanner headTitle={about} />
+        <div className='wrapperServices'>
+            {data &&
+                Object.entries(data).map(([category, serviceArray], index) => (
+                
+                <div key={index} className='wrapper-services'>
+                    <ServiceBlock
+                    title={category}
+                    services={serviceArray}
+                    index={index}
+                    />
+                    {serviceArray[2] && serviceArray[0].length > 0 && (
+                    <PriceTable services={serviceArray[0]} />
+                    )}
           </div>
         ))}
+        </div>
     </div>
   );
 };

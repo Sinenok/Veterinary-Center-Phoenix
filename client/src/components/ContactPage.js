@@ -2,11 +2,13 @@ import React from "react";
 import "./../styles/oleg.css";
 import vk from "./../img/contacts/vk.png";
 import dog from './../img/contacts/Rectangle80.png'
+import HeaderBanner from "./HeaderBanner"
 
 function ContactPage() {
+  const about = "Контакты";
   return (
     <div className="ContactPage" >
-
+        <HeaderBanner headTitle={about} />
         <div class="containerCon">
             <div class="flex-container">
                 <div className="block" id="block1">

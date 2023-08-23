@@ -1,9 +1,14 @@
 import React from "react";
 import "./../styles/oleg.css";
+import HeaderBanner from "./HeaderBanner"
 
 function PrivacyPolicy(){
+    const about = "Политика конфиденциальности";
+
     return(
         <div className="PrivacyPolicy">
+            
+            <HeaderBanner headTitle={about} />
             <div className="ContentPrivacy">
                 <div className="block_info">
                     <p className="subtitle">1. Общие положения</p>

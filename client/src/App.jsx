@@ -7,6 +7,10 @@ import BodyMainPage from "./components/BodyMainPage";
 import Footer from "./components/Footer";
 import AboutClinicPage from "./pages/AboutClinicPage";
 import ServicePage from "./components/ServicePage"
+import PriseList from "./components/PriseList";
+import PrivacyPolicy from "./components/PrivacyPolicy"
+import ContactPage from "./components/ContactPage";
+
 
 function App() {
   const [isRotated, setIsRotated] = useState(false);
@@ -45,6 +49,9 @@ function App() {
             <Route path="/" element={<MainPage />} />
             <Route path="/about" element={<AboutClinicPage />} />
             <Route path="/ServicePage" element={<ServicePage/>} />
+            <Route path="/PriceList" element={<PriseList/>} />
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
+            <Route path="/ContactPage" element={<ContactPage/>} />
           </Routes>
           <Footer />
         </div>
