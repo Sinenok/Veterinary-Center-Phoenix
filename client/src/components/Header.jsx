@@ -37,19 +37,22 @@ const Header = ({
       navBtnImg.src = hamburgerMenu;
     }
   };
+  const func = () => {
+    console.log('dsadsada');
+  }
   return (
     <div className="Header">
       <nav id="nav" className="nav">
         <div className="container">
           <div className="nav__row">
             <div className="nav__logo logo">
-              <Link to="/">
+              <Link onClick={func} to="/">
                 <img className="logo__img" alt="" src={mainLogo} />
               </Link>
             </div>
             <ul className="nav__list-links list">
               <li className="list__item">
-                <a href="#">О нас</a>
+                <Link to="/about">О наc</Link>
               </li>
               <li className="list__item">
                 <a href="#">Специалисты</a>

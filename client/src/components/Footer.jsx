@@ -1,5 +1,6 @@
 import React from "react";
 import "./../styles/main.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -7,7 +8,7 @@ function Footer() {
       <ul className="footer__wrapper">
         <ul className="footer__links f-links">
           <li className="f-links__item">
-            <a href="#">О нас</a>
+            <Link to="/about">О нас</Link>
           </li>
           <li className="f-links__item">
             <a href="">Специалисты</a>

@@ -25,6 +25,7 @@ import vkIcon from "./../img/main-page/vk-icon.svg";
 import devCat1 from "./../img/main-page/device card-services/devCat1.png";
 import devCat2 from "./../img/main-page/device card-services/devCat2.png";
 import devCat3 from "./../img/main-page/device card-services/devCat3.png";
+import { useNavigate } from "react-router-dom";
 
 const MainPage = () => {
   const reviews = [
@@ -57,6 +58,10 @@ const MainPage = () => {
         "Хотим сказать большое спасибо клинике Феникс за проведенную нашей кошечке Милке стерилизацию, операцию перенесли легко, с наименьшим стрессом, счастливые прыгаем-бегаем дома) ",
     },
   ];
+  const navigate = useNavigate();
+  const aboutHandleClick = (value) => {
+    navigate(`/${value}`);
+  };
   return (
     <div className="main-page-body">
       <div className="main__banner">
@@ -213,7 +218,12 @@ const MainPage = () => {
         <div className="love-animal__wrapper">
           <div className="love-animal__main-title main-title">
             <div className="love-animal__button buttons-category">
-              <button className="buttons-category__about-us">О нас</button>
+              <button
+                onClick={() => aboutHandleClick('about')}
+                className="buttons-category__about-us"
+              >
+                О нас
+              </button>
             </div>
             <div className="love-animal__title body-titles">
               Мы любим <span className="title-span">животных</span>

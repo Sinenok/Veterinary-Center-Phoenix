@@ -29,7 +29,7 @@ body {
 /* --------------------------Navbar----------------------------------------------------------------------- */
 .nav {
   /* border: 3px solid black; */
-  max-width: 1318px;
+  max-width: 1742px;
   height: 150.02px;
   margin: 10px 0 0 45px;
   font-size: 19px;
@@ -47,6 +47,7 @@ body {
 .device-logo__img {
   max-width: 150px;
   max-height: 150.021px;
+  position: relative;
 }
 @media (max-width: 600px) {
   .nav {
@@ -203,6 +204,12 @@ body {
   /* border: 2px solid blue; */
   /* margin: 0; */
   /* max-height: 150px; */
+  position: relative;
+}
+.nav__logo > a {
+  display: inline-block;
+  /* border: 2px solid black; */
+  border-radius: 50%;
 }
 @media (max-width: 1230px) {
   .nav__logo {
@@ -228,9 +235,17 @@ body {
 }
 
 .nav__list-links {
-  max-width: 614px;
-  gap: 20px;
+  max-width: 700px;
+  gap: 60px;
+  /* max-width: 614px; */
+  /* gap: 20px; */
   /* border: 2px solid blue; */
+}
+@media (max-width: 1400px){
+  .nav__list-links {
+    max-width: 614px;
+    gap: 20px;
+  }
 }
 @media (max-width: 1230px) {
   .nav__list-links {
@@ -464,7 +479,7 @@ body {
 /* --------------------------Main----------------------------------------------------------------------- */
 .main {
   /* border: 2px solid orange; */
-  max-width: 1406px;
+  max-width: 1830px;
   margin: 0 auto;
   /* min-height: 100vh; */
   overflow: hidden;
@@ -472,7 +487,7 @@ body {
 }
 .main__container {
   /* border: 3px solid black; */
-  max-width: 1376px;
+  max-width: 1800px;
   /* width: 1406px; */
   margin: 0 auto;
   position: relative;
@@ -491,7 +506,7 @@ body {
   }
 }
 .main__banner {
-  /* width: 50%; */
+  width: 100%;
   /* border: 2px solid red; */
   position: absolute;
   top: 80px;
@@ -501,6 +516,7 @@ body {
   height: 693px; */
 }
 .main__banner-img {
+  width: 100%
 }
 
 .header__title {
@@ -2230,7 +2246,7 @@ body {
   margin-bottom: 38px;
 }
 @media (max-width: 750px) {
-  .f-links{
+  .f-links {
     margin-top: 25px;
   }
 }
@@ -2256,3 +2272,60 @@ body {
   }
 }
 /* --------------------------Footer----------------------------------------------------------------------- */
+
+/* --------------------------About clinic page----------------------------------------------------------------------- */
+/* --------------------------Header Banner----------------------------------------------------------------------- */
+.head-banner {
+  position: relative;
+  margin-top: -85px;
+  border-radius: 22px;
+  background: linear-gradient(154deg, #f07e00 0%, #f46353 100%);
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+.head-banner__title {
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin-left: 256px;
+}
+@media (max-width: 600px) {
+  .head-banner {
+    margin-top: -25px;
+    min-height: 80px;
+    align-items: center;
+    border-radius: 5px;
+  }
+  .head-banner__title {
+    font-size: 30px;
+    margin-left: 120px;
+  }
+}
+@media (max-width: 500px) {
+  .head-banner {
+    margin-top: -15px;
+    min-height: 60px;
+    align-items: center;
+  }
+  .head-banner__title {
+    font-size: 25px;
+    margin-left: 80px;
+  }
+}
+/* --------------------------Header Banner----------------------------------------------------------------------- */
+.AboutClinicPage {
+}
+.AboutClinicPage-wrapper {
+}
+.about-body {
+}
+.about-body__wraper {
+}
+.about-body__titles {
+}
+/* --------------------------multidisciplinary----------------------------------------------------------------------- */
+/* --------------------------multidisciplinary----------------------------------------------------------------------- */
+/* --------------------------About clinic page----------------------------------------------------------------------- */
