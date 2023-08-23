@@ -7,7 +7,7 @@ function ContactPage() {
   return (
     <div className="ContactPage" >
 
-        <div class="container">
+        <div class="containerCon">
             <div class="flex-container">
                 <div className="block" id="block1">
                     <div className="text">
