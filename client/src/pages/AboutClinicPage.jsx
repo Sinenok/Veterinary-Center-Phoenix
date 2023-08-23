@@ -12,7 +12,7 @@ const AboutClinicPage = () => {
         <HeaderBanner headTitle={about} />
         <div className="about-body">
           <div className="about-body__wraper">
-            <div className="about-body__titles">
+            <div class  Name="about-body__titles">
               Мы - многопрофильный
               <br />
               лечебно-диагностический
