@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import MainPage from "./pages/MainPage";
 import BodyMainPage from "./components/BodyMainPage";
 import Footer from "./components/Footer";
+import AboutClinicPage from "./pages/AboutClinicPage";
 
 function App() {
   const [isRotated, setIsRotated] = useState(false);
@@ -41,6 +42,7 @@ function App() {
           />
           <Routes>
             <Route path="/" element={<MainPage />} />
+            <Route path="/about" element={<AboutClinicPage />} />
           </Routes>
           <Footer />
         </div>

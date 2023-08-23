@@ -49,7 +49,7 @@ const Header = ({
             </div>
             <ul className="nav__list-links list">
               <li className="list__item">
-                <a href="#">О нас</a>
+                <Link to="/about">О наc</Link>
               </li>
               <li className="list__item">
                 <a href="#">Специалисты</a>
