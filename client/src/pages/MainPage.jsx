@@ -26,6 +26,7 @@ import devCat1 from "./../img/main-page/device card-services/devCat1.png";
 import devCat2 from "./../img/main-page/device card-services/devCat2.png";
 import devCat3 from "./../img/main-page/device card-services/devCat3.png";
 import { useNavigate } from "react-router-dom";
+import MainForm from "../components/MainForm";
 
 const MainPage = () => {
   const reviews = [
@@ -219,7 +220,7 @@ const MainPage = () => {
           <div className="love-animal__main-title main-title">
             <div className="love-animal__button buttons-category">
               <button
-                onClick={() => aboutHandleClick('about')}
+                onClick={() => aboutHandleClick("about")}
                 className="buttons-category__about-us"
               >
                 О нас
@@ -775,63 +776,7 @@ const MainPage = () => {
                 Запишитесь на профессиональную консультацию прямо сейчас
               </div>
             </div>
-            <form className="main-form">
-              <div className="record__form">
-                <div className="main-form__cat">
-                  <img className="main-form-img" alt="" src={formCat} />
-                </div>
-                <div className="record__title">
-                  Ваш питомец заслуживает
-                  <br />
-                  самого лучшего
-                </div>
-                <div className="record__subtitle">
-                  Запишитесь на профессиональную консультацию прямо сейчас
-                </div>
-                <div className="record__inputs">
-                  <div className="record__input-group">
-                    <input
-                      autoComplete="off"
-                      placeholder=" "
-                      className="record-input"
-                      required
-                      name="recordName"
-                      type="text"
-                    />
-                    <label className="record-label">Ваше имя</label>
-                  </div>
-                  <div className="record__input-group">
-                    <input
-                      autoComplete="off"
-                      placeholder=" "
-                      className="record-input"
-                      required
-                      name="recordPhone"
-                      type="tel"
-                      pattern="\+7\d{10}"
-                    />
-                    <label className="record-label">Номер телефона</label>
-                  </div>
-                </div>
-                <div className="record__button-form">
-                  <button className="record__button-submit">
-                    Записаться на консультацию
-                  </button>
-                </div>
-                <div className="record__checkbox">
-                  <label>
-                    <input
-                      required
-                      className="record__checbox-agreement-real"
-                      type="checkbox"
-                      name="recordCheckbox"
-                    />
-                    <span className="record__checbox-agreement-custom"></span>
-                    Даю согласие на обработку данных
-                  </label>
-                </div>
-              </div>
-            </form>
+            <MainForm />
           </div>
         </div>
       </div>
