@@ -27,6 +27,7 @@ import devCat2 from "./../img/main-page/device card-services/devCat2.png";
 import devCat3 from "./../img/main-page/device card-services/devCat3.png";
 import { useNavigate } from "react-router-dom";
 import MainForm from "../components/MainForm";
+import EnrollComponent from "../components/EnrollComponent";
 
 const MainPage = () => {
   const reviews = [
@@ -761,25 +762,7 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-      <div className="record">
-        <div className="record__wrapper">
-          <div className="record__main-title main-title">
-            <div className="record__button buttons-category">
-              <button className="buttons-category__enroll">Записаться</button>
-            </div>
-            <div className="record-title-device-wrapper">
-              <div className="record__title-device body-titles">
-                Ваш питомец заслуживает{" "}
-                <span className="title-span">самого лучшего</span>
-              </div>
-              <div className="record__subtitle-device">
-                Запишитесь на профессиональную консультацию прямо сейчас
-              </div>
-            </div>
-            <MainForm />
-          </div>
-        </div>
-      </div>
+      <EnrollComponent />
       <div className="map-contacts">
         <div className="map-contacts__wrapper">
           <div className="map-contacts__main-title main-title">
