@@ -241,18 +241,18 @@ body {
   /* gap: 20px; */
   /* border: 2px solid blue; */
 }
-@media (max-width: 1700px){
+@media (max-width: 1700px) {
   .nav__list-links {
     min-width: 800px;
   }
 }
-@media (max-width: 1550px){
+@media (max-width: 1550px) {
   .nav__list-links {
     min-width: auto;
     max-width: 700px;
   }
 }
-@media (max-width: 1400px){
+@media (max-width: 1400px) {
   .nav__list-links {
     max-width: 614px;
     gap: 20px;
@@ -528,7 +528,7 @@ body {
   height: 693px; */
 }
 .main__banner-img {
-  width: 100%
+  width: 100%;
 }
 
 .header__title {
@@ -839,6 +839,16 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 64px;
   line-height: 100%;
+}
+@media (max-width: 1200px) {
+  .body-titles {
+    font-size: 54px;
+  }
+}
+@media (max-width: 1000px) {
+  .body-titles {
+    font-size: 44px;
+  }
 }
 .love-animal__title {
 }
@@ -1191,6 +1201,11 @@ body {
   /* border: 2px solid red; */
   margin-top: 80px;
 }
+@media (max-width: 830px) {
+  .spaces {
+    display: none;
+  }
+}
 @media (max-width: 750px) {
   .all-for-healt__main-title {
     /* border: 2px solid red; */
@@ -1213,9 +1228,6 @@ body {
   .buttons-category__advantages {
     padding: 6px 12px;
     width: 100px;
-  }
-  .spaces {
-    display: none;
   }
 }
 .advantages-cards {
@@ -1882,6 +1894,7 @@ body {
 }
 .record__wrapper {
   padding: 0 10px;
+  /* border: 2px solid blue; */
 }
 .record__main-title {
   margin-top: 80px;
@@ -1927,6 +1940,16 @@ body {
     flex-basis: 0;
 
     /* border: 2px solid black; */
+  }
+}
+@media (max-width: 600px) {
+  .record__subtitle-device {
+    font-size: 14px;
+  }
+}
+@media (max-width: 450px) {
+  .record__subtitle-device {
+    font-size: 12px;
   }
 }
 .main-form {
@@ -2329,15 +2352,370 @@ body {
 }
 /* --------------------------Header Banner----------------------------------------------------------------------- */
 .AboutClinicPage {
+  margin-bottom: 80px;
 }
 .AboutClinicPage-wrapper {
 }
 .about-body {
 }
 .about-body__wraper {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 2px solid black; */
+}
+@media (max-width: 750px){
+  .about-body__wraper {
+    margin-top: 55px;
+  }
+  .AboutClinicPage {
+    margin-bottom: 50px;
+  }
 }
 .about-body__titles {
+  /* border: 2px solid black; */
+  /* margin-left: 180px; */
+  font-family: "Open Sans", sans-serif;
+  font-size: 64px;
+  line-height: 100%;
+  margin-bottom: 72px;
+  max-width: 100%;
+}
+@media (max-width: 1200px) {
+  .about-body__titles {
+    font-size: 54px;
+  }
+}
+@media (max-width: 1000px) {
+  .about-body__titles {
+    font-size: 44px;
+  }
+}
+@media (max-width: 750px) {
+  .about-body__titles {
+    font-size: 30px;
+    padding: 0 10px;
+    margin-bottom: 35px;
+  }
+}
+@media (max-width: 570px) {
+  .about-body__titles {
+    font-size: 25px;
+  }
+}
+@media (max-width: 450px) {
+  .about-body__titles {
+    font-size: 19px;
+  }
+}
+.about-br {
+}
+@media (max-width: 830px) {
+  .about-br {
+    display: none;
+  }
+}
+.about-body__content {
+  display: flex;
+  max-width: 1300px;
+  /* margin: 0 auto; */
+  /* border: 2px solid black; */
+}
+.about-body__content .about-clinic-text {
+  flex: 1 1 0;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 150%; /* 24px */
+}
+@media (max-width: 750px) {
+  .about-body__content .about-clinic-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .about-body__content .about-clinic-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 450px) {
+  .about-body__content .about-clinic-text {
+    font-size: 12px;
+  }
 }
 /* --------------------------multidisciplinary----------------------------------------------------------------------- */
+.multidisciplinary {
+  /* border: 2px solid black; */
+}
+.multidisciplinary > div:last-child {
+  /* vertical-align: sub; */
+  /* border: 5px solid yellow; */
+  margin-top: 42px;
+  margin-left: -30px;
+}
+.multidisciplinary__item {
+  /* flex: 1 1 0; */
+}
+@media (max-width: 1100px) {
+  .multidisciplinary .multidisciplinary__item:nth-last-child(-n + 2) {
+    border: 2px solid black;
+    display: none;
+  }
+  .multidisciplinary__item {
+    flex: 1 1 0;
+  }
+}
+.multidisciplinary-img {
+}
+.multidisciplinary-text {
+  max-width: 400px;
+  margin: 0 18px 0 50px;
+  /* border: 2px solid black; */
+}
+@media (max-width: 400px) {
+  .multidisciplinary-text {
+    margin-left: 18px;
+  }
+}
 /* --------------------------multidisciplinary----------------------------------------------------------------------- */
+/* --------------------------team----------------------------------------------------------------------- */
+.team-space {
+}
+@media (max-width: 830px) {
+  .team-space {
+    display: none;
+  }
+}
+.team {
+}
+.team > div:last-child {
+  margin-top: 109px;
+  margin-left: -30px;
+  position: relative;
+  z-index: -1;
+}
+.team__item {
+}
+.team-img {
+}
+.team-text {
+  max-width: 550px;
+  margin: 0 22px 0 73px;
+  /* border: 2px solid green; */
+}
+.team-text-debice {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .team {
+    flex-wrap: wrap;
+    column-gap: 31px;
+    row-gap: 15px;
+    /* border: 2px solid black; */
+    padding: 0 10px;
+  }
+  .team__item {
+    flex-basis: 50%;
+  }
+  .team__item:nth-child(2),
+  .team__item:nth-child(4) {
+    /* border: 2px solid gold; */
+    display: flex;
+    justify-content: center;
+  }
+  .team-text {
+    display: none;
+  }
+  .team > div:last-child {
+    display: none;
+  }
+  .team-text-debice {
+    max-width: 550px;
+    display: block;
+    /* border: 2px solid black; */
+  }
+  .team-text-debice:first-child {
+    /* border: 2px solid black; */
+  }
+}
+@media (max-width: 400px) {
+  .team {
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 15px;
+    /* border: 2px solid black; */
+    padding: 0 10px;
+  }
+}
+/* --------------------------team----------------------------------------------------------------------- */
+/* --------------------------purchase----------------------------------------------------------------------- */
+.purchase {
+}
+@media (max-width: 1100px) {
+  .purchase {
+    padding: 0 10px;
+  }
+}
+.purchase__item {
+  max-width: 550px;
+  /* border: 2px solid black; */
+}
+.purchase__item:last-child {
+  margin: 200px 0 0 50px;
+}
+@media (max-width: 1100px) {
+  .purchase__item:last-child {
+    margin: 200px 0 0 30px;
+  }
+}
+/* --------------------------purchase----------------------------------------------------------------------- */
+/* --------------------------felt----------------------------------------------------------------------- */
+.felt {
+  flex-direction: column;
+  row-gap: 73px;
+  /* border: 2px solid black; */
+}
+@media (max-width: 1100px) {
+  .felt {
+    padding: 0 10px;
+  }
+}
+.felt-row {
+  display: flex;
+  /* border: 2px solid black; */
+  column-gap: 174px;
+  /* max-width: 1000px; */
+}
+.row-first {
+}
+.row-first > .felt__item:first-child {
+  /* border: 2px solid green; */
+  /* margin-right: 174px; */
+  flex: 1 1 0;
+}
+.row-first > .felt__item:last-child p {
+  /* border: 2px solid blanchedalmond; */
+  display: none;
+}
+.felt__item {
+  max-width: 500px;
+}
+.felt-img {
+  /* max-width: 274px;
+  max-height: 216px; */
+}
+.row-second {
+  /* display: flex; */
+}
+.row-second > .felt__item:last-child {
+  /* border: 2px solid black; */
+  flex: 1 1 0;
+}
+@media (max-width: 1100px) {
+  .felt {
+    row-gap: 35px;
+  }
+  .row-first {
+    column-gap: 30px;
+  }
+  .row-first > .felt__item:last-child {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    flex: 1 1 0;
+  }
+  .row-first > .felt__item:last-child img {
+    /* width: 274px;
+    height: 216px; */
+    align-self: center;
+  }
+  .row-first > .felt__item:last-child p {
+    /* border: 2px solid blanchedalmond; */
+    display: block;
+    margin-top: 71px;
+  }
+  .row-second .felt__item:last-child {
+    border: 2px solid black;
+    display: none;
+  }
+  .felt-img {
+    align-items: center;
+  }
+}
+@media (max-width: 750px) {
+  .row-second {
+    margin-bottom: 45px;
+  }
+}
+@media (max-width: 600px) {
+  .row-first > .felt__item:last-child img {
+    /* width: 200px;
+    height: 170px; */
+  }
+}
+@media (max-width: 400px) {
+  /* .row-first > .felt__item {
+    border: 2px solid black;
+  }
+  .row-first > .felt__item:last-child img {
+    border: 2px solid blue;
+    flex: 1 1 0;
+    max-width: 100px;
+  }
+  .row-first {
+    column-gap: 10px;
+    border: 2px solid black;
+    flex-shrink: 1;
+  }
+  .felt{
+    border: 5px solid green;
+    max-width: 300px;
+  } */
+  .felt__item{
+    max-width: 200px;
+  }
+  .felt-button{
+    max-width: 300px;
+  }
+}
+.felt-button {
+  align-self: flex-end;
+  border-radius: 6px;
+  background: #f17f01;
+  margin: 0 auto;
+  display: flex;
+  /* border: 2px solid green; */
+
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  /* position: relative; */
+  width: 375px;
+  height: 60px;
+}
+.felt-grooming-btn {
+  /* border: 2px solid black; */
+  /* align-self: center; */
+  /* margin: 0 auto; */
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+}
+/* --------------------------felt----------------------------------------------------------------------- */
+/* --------------------------trusting relationship----------------------------------------------------------------------- */
+.trusting-relationship {
+  flex-direction: column;
+  align-self: flex-start;
+  /* border: 2px solid black; */
+  margin-left: 350px;
+}
+@media (max-width: 750px) {
+  .about-body .about-body__wraper:nth-child(5) {
+    display: none;
+  }
+}
+.trusting-relationship__title {
+}
+/* --------------------------trusting relationship----------------------------------------------------------------------- */
 /* --------------------------About clinic page----------------------------------------------------------------------- */
