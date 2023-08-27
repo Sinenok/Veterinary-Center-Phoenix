@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import formCat from "./../img/main-page/formCat.png";
 import "./../styles/main.css";
 
 const MainForm = () => {
+
     const [formData, setFormData] = useState({
         recordName: '',
         recordPhone: '',
@@ -62,6 +63,7 @@ const MainForm = () => {
           }));
         }
       };
+
 
   return (
     <>

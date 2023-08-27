@@ -6,11 +6,10 @@ import MainPage from "./pages/MainPage";
 import BodyMainPage from "./components/BodyMainPage";
 import Footer from "./components/Footer";
 import AboutClinicPage from "./pages/AboutClinicPage";
-import ServicePage from "./components/ServicePage"
+import ServicePage from "./components/ServicePage";
 import PriseList from "./components/PriseList";
-import PrivacyPolicy from "./components/PrivacyPolicy"
+import PrivacyPolicy from "./components/PrivacyPolicy";
 import ContactPage from "./components/ContactPage";
-
 
 function App() {
   const [isRotated, setIsRotated] = useState(false);
@@ -48,10 +47,95 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/about" element={<AboutClinicPage />} />
-            <Route path="/ServicePage" element={<ServicePage about={"Прием врача и амбулаторные процедуры"}/>} />
-            <Route path="/PriceList" element={<PriseList/>} />
-            <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
-            <Route path="/ContactPage" element={<ContactPage/>} />
+
+            <Route
+              path="/service-anesthesia"
+              element={
+                <ServicePage about={"Анестезия и интенсивная терапия"} />
+              }
+            />
+            <Route
+              path="/service-grooming"
+              element={
+                <ServicePage
+                  about={
+                    "Груминг животных, косметические манипуляции, окрашивание"
+                  }
+                />
+              }
+            />
+            <Route
+              path="/service-dermatology"
+              element={<ServicePage about={"Дерматология"} />}
+            />
+            <Route
+              path="/service-castration"
+              element={<ServicePage about={"Кастрация и стерилизация"} />}
+            />
+            <Route
+              path="/service-laboratory-diagnostics"
+              element={<ServicePage about={"Лабораторная диагностика"} />}
+            />
+            <Route
+              path="/service-surgery"
+              element={<ServicePage about={"Общая хирургия"} />}
+            />
+            <Route
+              path="/service-oncology"
+              element={<ServicePage about={"Онкология"} />}
+            />
+            <Route
+              path="/service-doctor-visit"
+              element={
+                <ServicePage about={"Прием врача и амбулаторные процедуры"} />
+              }
+            />
+            <Route
+              path="/service-reproduction"
+              element={<ServicePage about={"Репродукция"} />}
+            />
+            <Route
+              path="/service-maternity-and-neonatology"
+              element={
+                <ServicePage
+                  about={"Родильное отделение и отделение неонатологии"}
+                />
+              }
+            />
+            <Route
+              path="/service-hospital"
+              element={<ServicePage about={"Стационар"} />}
+            />
+            <Route
+              path="/service-dentistry"
+              element={<ServicePage about={"Стоматология"} />}
+            />
+            <Route
+              path="/service-traumatology-and-orthopedics"
+              element={<ServicePage about={"Травматология и ортопедия"} />}
+            />
+            <Route
+              path="/service-urology-gynecology"
+              element={<ServicePage about={"Урология, гинекология"} />}
+            />
+            <Route
+              path="/service-surgical-procedures"
+              element={<ServicePage about={"Хирургические процедуры"} />}
+            />
+            <Route
+              path="/service-euthanasia-and-funeral"
+              element={<ServicePage about={"Эутаназия и ритуальные услуги"} />}
+            />
+            {/* <Route
+              path="/ServicePage"
+              element={
+                <ServicePage about={"Прием врача и амбулаторные процедуры"} />
+              }
+            /> */}
+
+            <Route path="/PriceList" element={<PriseList />} />
+            <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+            <Route path="/ContactPage" element={<ContactPage />} />
           </Routes>
           <Footer />
         </div>

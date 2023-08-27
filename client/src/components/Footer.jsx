@@ -8,23 +8,35 @@ function Footer() {
       <ul className="footer__wrapper">
         <ul className="footer__links f-links">
           <li className="f-links__item">
-            <Link to="/about">О нас</Link>
+            <Link to="/about" onClick={() => window.scroll(0, 0)}>
+              О нас
+            </Link>
           </li>
           <li className="f-links__item">
-            <a href="">Специалисты</a>
+            <Link to="/" onClick={() => window.scroll(0, 0)}>
+              Специалисты
+            </Link>
           </li>
           <li className="f-links__item">
-            <a href="">Услуги</a>
+            <Link to="/" onClick={() => window.scroll(0, 0)}>
+              Услуги
+            </Link>
           </li>
           <li className="f-links__item">
-            <a href="">Цены</a>
+            <Link to="/" onClick={() => window.scroll(0, 0)}>
+              Цены
+            </Link>
           </li>
           <li className="f-links__item">
-            <a href="">Контакты</a>
+            <Link to="/" onClick={() => window.scroll(0, 0)}>
+              Контакты
+            </Link>
           </li>
         </ul>
         <div className="footer__privacy-policy">
-          <a href="#">Политика конфиденциальности</a>
+          <Link to="/" onClick={() => window.scroll(0, 0)}>
+            Политика конфиденциальности
+          </Link>
         </div>
       </ul>
     </div>

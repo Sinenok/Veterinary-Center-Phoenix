@@ -4,6 +4,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Lato:wght@400;700&family=Open+Sans:wght@500&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   font-family: "Lato", sans-serif;
@@ -2365,7 +2368,7 @@ body {
   align-items: center;
   /* border: 2px solid black; */
 }
-@media (max-width: 750px){
+@media (max-width: 750px) {
   .about-body__wraper {
     margin-top: 55px;
   }
@@ -2671,10 +2674,10 @@ body {
     border: 5px solid green;
     max-width: 300px;
   } */
-  .felt__item{
+  .felt__item {
     max-width: 200px;
   }
-  .felt-button{
+  .felt-button {
     max-width: 300px;
   }
 }
