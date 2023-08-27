@@ -170,12 +170,12 @@ const Header = ({
                 )}
               </li>
               <li className="list__item">
-                <Link to="/about" onClick={window.scroll(0, 0)}>
+                <Link to="/PriceList" onClick={window.scroll(0, 0)}>
                   Цены
                 </Link>
               </li>
               <li className="list__item">
-                <Link to="/about" onClick={window.scroll(0, 0)}>
+                <Link to="/ContactPage" onClick={window.scroll(0, 0)}>
                   Контакты
                 </Link>
               </li>
