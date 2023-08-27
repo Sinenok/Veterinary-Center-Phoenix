@@ -103,7 +103,6 @@ const MainForm = () => {
                 required
                 name="recordPhone"
                 type="tel"
-                pattern="\+7\d{10}"
                 maxLength={15}
                 value={formData.recordPhone}
 

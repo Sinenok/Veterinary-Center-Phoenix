@@ -10,6 +10,7 @@ import ServicePage from "./components/ServicePage";
 import PriseList from "./components/PriseList";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import ContactPage from "./components/ContactPage";
+import SpecialistsPage from "./pages/SpecialistsPage";
 
 function App() {
   const [isRotated, setIsRotated] = useState(false);
@@ -134,6 +135,7 @@ function App() {
             /> */}
 
             <Route path="/PriceList" element={<PriseList />} />
+            <Route path="/specialists" element={<SpecialistsPage />} />
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="/ContactPage" element={<ContactPage />} />
           </Routes>

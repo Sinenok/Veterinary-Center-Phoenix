@@ -13,7 +13,7 @@ function Footer() {
             </Link>
           </li>
           <li className="f-links__item">
-            <Link to="/" onClick={() => window.scroll(0, 0)}>
+            <Link to="/specialists" onClick={() => window.scroll(0, 0)}>
               Специалисты
             </Link>
           </li>
