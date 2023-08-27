@@ -429,5 +429,9 @@
     .ServiceBlock{
         flex-direction: column;
     }
+    .CenterBlock {
+        margin-right: 0%;
+    
+      }
 
 }

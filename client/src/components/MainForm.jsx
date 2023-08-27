@@ -3,35 +3,67 @@ import formCat from "./../img/main-page/formCat.png";
 import "./../styles/main.css";
 
 const MainForm = () => {
-  const [formData, setFormData] = useState({
-    recordName: "",
-    recordPhone: "",
-  });
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await fetch("http://127.0.0.1:8000/api/formback/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+    const [formData, setFormData] = useState({
+        recordName: '',
+        recordPhone: '',
       });
-      if (response.ok) {
-        console.log("Данные успешно отправлены");
+    const formatPhoneNumber = (inputValue) => {
+        const cleanedValue = inputValue.replace(/\D/g, '');
+    
+        let formattedValue = cleanedValue.startsWith('7') ? `+${cleanedValue}` : `+7${cleanedValue}`;
+    
+        if (formattedValue.length > 2) {
+          formattedValue = `${formattedValue.substring(0, 2)} ${formattedValue.substring(2)}`;
+        }
+        if (formattedValue.length > 6) {
+          formattedValue = `${formattedValue.substring(0, 6)} ${formattedValue.substring(6)}`;
+        }
+        if (formattedValue.length > 10) {
+          formattedValue = `${formattedValue.substring(0, 10)} ${formattedValue.substring(10)}`;
+        }
+        if (formattedValue.length > 15) {
+          formattedValue = `${formattedValue.substring(0, 15)} ${formattedValue.substring(15)}`;
+        }
+    
+        return formattedValue;
       }
-    } catch (error) {
-      console.error("Произошла ошибка при отправке данных", error);
-    }
-  };
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+          const response = await fetch('http://127.0.0.1:8000/api/formback/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+          if (response.ok) {
+            console.log('Данные успешно отправлены');
+          } 
+        } catch (error) {
+          console.error('Произошла ошибка при отправке данных', error);
+        }
+      };
+
+      const handleInputChange = (event) => {
+        const { name, value } = event.target;
+    
+        if (name === 'recordPhone') {
+          const formattedValue = formatPhoneNumber(value);
+          setFormData((prevData) => ({
+            ...prevData,
+            [name]: formattedValue,
+          }));
+        } else {
+          setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+          }));
+        }
+      };
+
 
   return (
     <>
@@ -57,6 +89,8 @@ const MainForm = () => {
                 required
                 name="recordName"
                 type="text"
+                value={formData.recordName}
+
                 onChange={handleInputChange}
               />
               <label className="record-label">Ваше имя</label>
@@ -70,13 +104,16 @@ const MainForm = () => {
                 name="recordPhone"
                 type="tel"
                 pattern="\+7\d{10}"
+                maxLength={15}
+                value={formData.recordPhone}
+
                 onChange={handleInputChange}
               />
               <label className="record-label">Номер телефона</label>
             </div>
           </div>
           <div className="record__button-form">
-            <button className="record__button-submit">
+            <button className="record__button-submit" type="submit">
               Записаться на консультацию
             </button>
           </div>
