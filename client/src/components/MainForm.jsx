@@ -1,11 +1,41 @@
-import React from "react";
+import React, { useState } from 'react';
 import formCat from "./../img/main-page/formCat.png";
 import "./../styles/main.css";
 
 const MainForm = () => {
+    const [formData, setFormData] = useState({
+        recordName: '',
+        recordPhone: '',
+      });
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        try {
+          const response = await fetch('http://127.0.0.1:8000/api/formback/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+          if (response.ok) {
+            console.log('Данные успешно отправлены');
+          } 
+        } catch (error) {
+          console.error('Произошла ошибка при отправке данных', error);
+        }
+      };
+      const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: value,
+        }));
+      };
+
   return (
     <>
-      <form className="main-form">
+      <form className="main-form" onSubmit={handleSubmit}>
         <div className="record__form">
           <div className="main-form__cat">
             <img className="main-form-img" alt="" src={formCat} />
@@ -27,6 +57,7 @@ const MainForm = () => {
                 required
                 name="recordName"
                 type="text"
+                onChange={handleInputChange}
               />
               <label className="record-label">Ваше имя</label>
             </div>
@@ -39,6 +70,7 @@ const MainForm = () => {
                 name="recordPhone"
                 type="tel"
                 pattern="\+7\d{10}"
+                onChange={handleInputChange}
               />
               <label className="record-label">Номер телефона</label>
             </div>

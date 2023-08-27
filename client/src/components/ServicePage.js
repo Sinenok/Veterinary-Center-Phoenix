@@ -1,7 +1,7 @@
 import React, { useEffect,useState } from 'react';
 import "./../styles/oleg.css";
 import HeaderBanner from "./HeaderBanner"
-import MainForm from './MainForm';
+import EnrollComponent from './EnrollComponent';
 
 const PriceTable = ({ services }) => {
      console.log(services);
@@ -83,8 +83,11 @@ const PriceTable = ({ services }) => {
                     ):(
                     <p>loading..</p>
                     )}
-                    <MainForm></MainForm>
+                    
                     </div>
+                </div>
+                <div>
+                    <EnrollComponent></EnrollComponent>
                 </div>
         </div>
   );

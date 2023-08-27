@@ -20,5 +20,7 @@ from fenixapp import views
 
 urlpatterns = [
     path('', views.index, name="home"),
-    re_path(r"price_list",views.price_list)
+    re_path(r"price_list",views.price_list),
+    re_path(r"api/formback/", views.form_back_view, name='formback'),
+
 ]
