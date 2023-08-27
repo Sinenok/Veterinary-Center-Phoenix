@@ -26,6 +26,6 @@ def form_back_view(request):
         bot = telebot.TeleBot(token)
         message = f'Получены новые данные:\nИмя: {record_name}\nТелефон: {record_phone}'
 
-        bot.send_message("5150739534", message)
+        bot.send_message("-1001931378235", message)
 
         return Response({'message': 'Данные получены'}, status=status.HTTP_200_OK)

@@ -48,7 +48,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/about" element={<AboutClinicPage />} />
-            <Route path="/ServicePage" element={<ServicePage/>} />
+            <Route path="/ServicePage" element={<ServicePage about={"Прием врача и амбулаторные процедуры"}/>} />
             <Route path="/PriceList" element={<PriseList/>} />
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy/>} />
             <Route path="/ContactPage" element={<ContactPage/>} />

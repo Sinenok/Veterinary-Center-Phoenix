@@ -341,8 +341,7 @@
   .LeftSection {
     flex: 1;
     padding: 10px;
-    min-width: 200px;
-    max-width: 300px;
+    max-width: 200px;
   }
   
   .CenterSection {
@@ -350,6 +349,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    
    
   }
   
@@ -358,7 +358,8 @@
     border: 1px solid #F17F01;
     padding: 25px;
     border-radius: 22px;
-    margin-right: 15%;
+    margin-right: 20%;
+
   }
   .CenterBlock > p{
     margin-top: 1vh;

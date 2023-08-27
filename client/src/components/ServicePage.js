@@ -33,10 +33,10 @@ const PriceTable = ({ services }) => {
     );
   };
   
-  const ServicePage = () => {
+  const ServicePage = ({about}) => {
 
     const [data, setData] = useState(null);
-    const about = "Терапия";
+    
     useEffect(() => {
         fetch('http://127.0.0.1:8000/price_list') 
             .then(response => response.json())
@@ -77,7 +77,7 @@ const PriceTable = ({ services }) => {
                             </p>
                         </div>
                         {(data) ? (
-                        <PriceTable services = {data["Анестезия и интенсивная терапия"]} 
+                        <PriceTable services = {data[about]} 
                         ></PriceTable>
                     
                     ):(
