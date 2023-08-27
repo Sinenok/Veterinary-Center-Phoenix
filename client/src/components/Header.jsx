@@ -37,38 +37,28 @@ const Header = ({
       navBtnImg.src = hamburgerMenu;
     }
   };
-  const func = () => {
-    console.log('dsadsada');
-  }
+  const burgerMenuClose = () => {};
   return (
     <div className="Header">
       <nav id="nav" className="nav">
         <div className="container">
           <div className="nav__row">
             <div className="nav__logo logo">
-              <Link onClick={func} to="/">
+              <Link onClick={() => window.scroll(0, 0)} to="/">
                 <img className="logo__img" alt="" src={mainLogo} />
               </Link>
             </div>
             <ul className="nav__list-links list">
               <li className="list__item">
-                <Link to="/about">О наc</Link>
+                <Link to="/about" onClick={() => window.scroll(0, 0)}>
+                  О наc
+                </Link>
               </li>
               <li className="list__item">
-                <a href="#">Специалисты</a>
+                <Link to="/about" onClick={() => window.scroll(0, 0)}>
+                  Специалисты
+                </Link>
               </li>
-              {/* <li className="list__item">
-                <ul className="list-clients">
-                  <li className="list-clients__item">Клиентам</li>
-                  <li className="list-clients__item">
-                    <img
-                      className="list-clients__item-icon"
-                      alt=""
-                      src={mainIcon}
-                    />
-                  </li>
-                </ul>
-              </li> */}
               <li
                 className="list__item-dropdown list__item"
                 onMouseEnter={handleMouseEnter}
@@ -76,9 +66,10 @@ const Header = ({
                 onClick={handleMouseClick}
               >
                 <ul className="list-services">
-                  <a
+                  <Link
+                    onClick={() => window.scroll(0, 0)}
                     className="link-down"
-                    href={screenWidth > 1230 ? "#" : "#dsad"}
+                    to={screenWidth > 1230 ? "#" : "/about"}
                   >
                     <li className="list-services__item">Услуги</li>
                     <li className="li-icon-nav list-services__item">
@@ -96,7 +87,7 @@ const Header = ({
                         />
                       </picture>
                     </li>
-                  </a>
+                  </Link>
                 </ul>
                 {isRotated && (
                   <div
@@ -106,68 +97,87 @@ const Header = ({
                   >
                     <ul className="dropdown-list">
                       <li className="dropdown-list__item">
-                        <Link to="/">Эндоскопия</Link>
+                        <Link to="/service-anesthesia">
+                          Анестезия и интенсивная терапия
+                        </Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/a">Репродукция</Link>
+                        <Link to="/service-grooming">
+                          Груминг животных, косметические манипуляции,
+                          окрашивание
+                        </Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Терапия</Link>
+                        <Link to="/service-dermatology">Дерматология</Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Неонатология</Link>
+                        <Link to="/service-castration">
+                          Кастрация и стерилизация
+                        </Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Хирургия</Link>
+                        <Link to="/service-laboratory-diagnostics">
+                          Лабораторная диагностика
+                        </Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Кастрация, стерелизации</Link>
+                        <Link to="/service-surgery">Общая хирургия</Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Кардиология</Link>
+                        <Link to="/service-oncology">Онкология</Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Дерматология</Link>
+                        <Link to="/service-doctor-visit">
+                          Прием врача и амбулаторные процедуры
+                        </Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Ортопедия и травмотология</Link>
+                        <Link to="/service-reproduction">Репродукция</Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Пластическая хирургия</Link>
+                        <Link to="/service-maternity-and-neonatology">
+                          Родильное отделение и отделение неонатологии
+                        </Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Операции на голове</Link>
+                        <Link to="/service-hospital">Стационар</Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Стоматология</Link>
+                        <Link to="/service-dentistry">Стоматология</Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Анастезия и интенсивная терапия</Link>
+                        <Link to="/service-traumatology-and-orthopedics">
+                          Травматология и ортопедия
+                        </Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Стационар</Link>
+                        <Link to="/service-urology-gynecology">
+                          Урология, гинекология
+                        </Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Онкология</Link>
+                        <Link to="/service-surgical-procedures">
+                          Хирургические процедуры
+                        </Link>
                       </li>
                       <li className="dropdown-list__item">
-                        <Link to="/">Вакцинация и чипирование</Link>
-                      </li>
-                      <li className="dropdown-list__item">
-                        <Link to="/">Груминг и стрижка</Link>
-                      </li>
-                      <li className="dropdown-list__item">
-                        <Link to="/">Лабораторная диагностика</Link>
+                        <Link to="/service-euthanasia-and-funeral">
+                          Эутаназия и ритуальные услуги
+                        </Link>
                       </li>
                     </ul>
                   </div>
                 )}
               </li>
               <li className="list__item">
-                <a href="#">Цены</a>
+                <Link to="/about" onClick={window.scroll(0, 0)}>
+                  Цены
+                </Link>
               </li>
               <li className="list__item">
-                <a href="#">Контакты</a>
+                <Link to="/about" onClick={window.scroll(0, 0)}>
+                  Контакты
+                </Link>
               </li>
             </ul>
             <ul className="nav__list-info list">

@@ -1,37 +1,37 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import formCat from "./../img/main-page/formCat.png";
 import "./../styles/main.css";
 
 const MainForm = () => {
-    const [formData, setFormData] = useState({
-        recordName: '',
-        recordPhone: '',
-      });
+  const [formData, setFormData] = useState({
+    recordName: "",
+    recordPhone: "",
+  });
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        try {
-          const response = await fetch('http://127.0.0.1:8000/api/formback/', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-          });
-          if (response.ok) {
-            console.log('Данные успешно отправлены');
-          } 
-        } catch (error) {
-          console.error('Произошла ошибка при отправке данных', error);
-        }
-      };
-      const handleInputChange = (event) => {
-        const { name, value } = event.target;
-        setFormData((prevData) => ({
-          ...prevData,
-          [name]: value,
-        }));
-      };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await fetch("http://127.0.0.1:8000/api/formback/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        console.log("Данные успешно отправлены");
+      }
+    } catch (error) {
+      console.error("Произошла ошибка при отправке данных", error);
+    }
+  };
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
   return (
     <>
