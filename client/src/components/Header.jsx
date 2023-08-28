@@ -7,6 +7,7 @@ import hamburgerMenu from "./../img/main-page/hamburger-menu.svg";
 import closeBurger from "./../img/main-page/closeBurger.svg";
 import { Link } from "react-router-dom";
 
+
 const Header = ({
   handleMouseEnter,
   handleMouseLeave,

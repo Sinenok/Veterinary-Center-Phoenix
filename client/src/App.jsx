@@ -139,9 +139,10 @@ function App() {
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="/ContactPage" element={<ContactPage />} />
           </Routes>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </main>
+      <Footer />
     </Router>
   );
 }
