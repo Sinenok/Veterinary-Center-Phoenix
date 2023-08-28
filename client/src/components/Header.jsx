@@ -7,21 +7,12 @@ import hamburgerMenu from "./../img/main-page/hamburger-menu.svg";
 import closeBurger from "./../img/main-page/closeBurger.svg";
 import { Link } from "react-router-dom";
 
-
 const Header = ({
   handleMouseEnter,
   handleMouseLeave,
   handleMouseClick,
   isRotated,
 }) => {
-  const getIconPath = () => {
-    const screenWidth = window.innerWidth;
-    if (screenWidth < 1230) {
-      return mainIconMedia;
-    } else {
-      return mainIcon;
-    }
-  };
   const screenWidth = window.innerWidth;
   const toggleBurger = () => {
     const nav = document.querySelector("#nav");

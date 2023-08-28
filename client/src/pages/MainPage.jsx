@@ -63,8 +63,10 @@ const MainPage = () => {
   ];
   const navigate = useNavigate();
   const aboutHandleClick = (value) => {
+    window.scroll(0, 0);
     navigate(`/${value}`);
   };
+
   return (
     <div className="main-page-body">
       <div className="main__banner">

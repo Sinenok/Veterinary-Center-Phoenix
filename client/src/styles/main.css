@@ -1355,12 +1355,13 @@ body {
   background: #fff;
   /* width: 660px; */
   flex-basis: calc(50% - 23px);
-  min-height: 168px;
+  /* min-height: 168px; */
 
   display: flex;
   flex-shrink: 1;
   /* flex-grow: 1; */
   flex-direction: row;
+  /* column-gap: 37px; */
   /* margin-bottom: 42px; */
 }
 .specialists-cards__wrapper:last-child {
@@ -1368,7 +1369,8 @@ body {
 }
 @media (max-width: 1300px) {
   .specialists-cards__wrapper {
-    flex-grow: 1;
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
     flex-basis: 100%;
   }
   .specialists-cards__wrapper:not(:last-child) {
@@ -1390,8 +1392,8 @@ body {
   /* flex: 1 1 0; */
 }
 .photo-img {
-  min-width: 192px;
-  min-height: 100%;
+  /* min-width: 192px;
+  min-height: 100%; */
 }
 @media (max-width: 450px) {
   .specialists-cards__photo {
@@ -1399,19 +1401,23 @@ body {
     /* width: 100%; */
   }
   .photo-img {
-    min-width: auto;
+    /* min-width: auto;
     max-width: 180px;
-    min-height: 100%;
+    min-height: 100%; */
   }
 }
 .specialists-cards__info {
   display: flex;
   flex-direction: column;
-  margin: 0 37px 33px 37px;
+  /* margin: 0 37px 33px 37px; */
+  padding: 33px 37px 33px 37px;
   /* border: 2px solid yellow; */
+  flex: 1 1 0;
+  /* min-width: 70%; */
 }
 .specialists-cards__title {
-  padding: 33px 0 15px 0;
+  /* padding: 33px 0 15px 0; */
+  margin-bottom: 15px;
   font-family: "Open Sans", sans-serif;
   font-size: 24px;
   line-height: 110%; /* 26.4px */
@@ -1426,16 +1432,37 @@ body {
   }
 }
 @media (max-width: 550px) {
+  .specialists-cards__photo {
+    /* border: 2px solid red; */
+    /* width: 100%; */
+    flex-basis: 35%;
+  }
   .specialists-cards__info {
-    /* border: 2px solid black; */
-    margin: 0 20px 20px 20px;
+    padding: 17px 21px 17px 21px;
+    /* margin: 0 20px 20px 20px; */
   }
   .specialists-cards__title {
-    padding: 20px 0 15px 0;
+    /* padding: 20px 0 15px 0; */
     font-size: 15px;
   }
   .specialists-cards__desctription {
     font-size: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .specialists-cards__photo {
+    flex-basis: 30%;
+  }
+  .photo-img {
+    width: 100%;
+    height: 100%;
+  }
+  .specialists-cards__info {
+    padding: 10px 10px 10px 10px;
+  }
+  .specialists-cards__title {
+    margin-bottom: 5px;
+    font-size: 12px;
   }
 }
 .in-safe-hands__all-specialists-btn {
@@ -2743,6 +2770,9 @@ body {
   margin-left: 250px;
 }
 @media (max-width: 750px) {
+  .SpecialistsPage {
+    margin-bottom: 17px;
+  }
   .SpecialistsPage-wrapper .in-safe-hand__title {
     margin-left: 50px;
   }
