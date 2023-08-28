@@ -1387,6 +1387,7 @@ body {
 }
 .specialists-cards__photo {
   /* border: 2px solid red; */
+  /* flex: 1 1 0; */
 }
 .photo-img {
   min-width: 192px;
@@ -2051,12 +2052,11 @@ body {
   transition: 0.3s;
   pointer-events: none;
 }
-.record-input::selection {
-  /* background-color: green; */
+/* .record-input::selection {
   color: #fff;
   font-family: "Lato", sans-serif;
   font-size: 14px;
-}
+} */
 .record__inputs .record__input-group > input:focus {
   border-bottom: 2px solid rgba(255, 255, 255, 1);
 }
@@ -2722,3 +2722,29 @@ body {
 }
 /* --------------------------trusting relationship----------------------------------------------------------------------- */
 /* --------------------------About clinic page----------------------------------------------------------------------- */
+
+/* --------------------------Specialists page----------------------------------------------------------------------- */
+.SpecialistsPage {
+  margin-bottom: 80px;
+}
+.SpecialistsPage-wrapper {
+}
+.SpecialistsPage-wrapper .in-safe-hands__all-specialists-btn {
+  display: none;
+}
+.SpecialistsPage-wrapper .in-safe-hand__button {
+  display: none;
+}
+.SpecialistsPage-wrapper .in-safe-hand__main-title {
+  /* display: flex;
+  justify-content: center; */
+}
+.SpecialistsPage-wrapper .in-safe-hand__title {
+  margin-left: 250px;
+}
+@media (max-width: 750px) {
+  .SpecialistsPage-wrapper .in-safe-hand__title {
+    margin-left: 50px;
+  }
+}
+/* --------------------------Specialists page----------------------------------------------------------------------- */

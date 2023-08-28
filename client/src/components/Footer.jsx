@@ -13,7 +13,7 @@ function Footer() {
             </Link>
           </li>
           <li className="f-links__item">
-            <Link to="/" onClick={() => window.scroll(0, 0)}>
+            <Link to="/specialists" onClick={() => window.scroll(0, 0)}>
               Специалисты
             </Link>
           </li>
@@ -23,18 +23,18 @@ function Footer() {
             </Link>
           </li>
           <li className="f-links__item">
-            <Link to="/" onClick={() => window.scroll(0, 0)}>
+            <Link to="/PriceList" onClick={() => window.scroll(0, 0)}>
               Цены
             </Link>
           </li>
           <li className="f-links__item">
-            <Link to="/" onClick={() => window.scroll(0, 0)}>
+            <Link to="/ContactPage" onClick={() => window.scroll(0, 0)}>
               Контакты
             </Link>
           </li>
         </ul>
         <div className="footer__privacy-policy">
-          <Link to="/" onClick={() => window.scroll(0, 0)}>
+          <Link to="/PrivacyPolicy" onClick={() => window.scroll(0, 0)}>
             Политика конфиденциальности
           </Link>
         </div>

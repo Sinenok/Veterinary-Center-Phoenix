@@ -37,7 +37,6 @@ const Header = ({
       navBtnImg.src = hamburgerMenu;
     }
   };
-  const burgerMenuClose = () => {};
   return (
     <div className="Header">
       <nav id="nav" className="nav">
@@ -55,7 +54,7 @@ const Header = ({
                 </Link>
               </li>
               <li className="list__item">
-                <Link to="/about" onClick={() => window.scroll(0, 0)}>
+                <Link to="/specialists" onClick={() => window.scroll(0, 0)}>
                   Специалисты
                 </Link>
               </li>
@@ -69,7 +68,7 @@ const Header = ({
                   <Link
                     onClick={() => window.scroll(0, 0)}
                     className="link-down"
-                    to={screenWidth > 1230 ? "#" : "/about"}
+                    to={screenWidth > 1230 ? "/Service" : "/Service"}
                   >
                     <li className="list-services__item">Услуги</li>
                     <li className="li-icon-nav list-services__item">
@@ -170,12 +169,12 @@ const Header = ({
                 )}
               </li>
               <li className="list__item">
-                <Link to="/about" onClick={window.scroll(0, 0)}>
+                <Link to="/PriceList" onClick={window.scroll(0, 0)}>
                   Цены
                 </Link>
               </li>
               <li className="list__item">
-                <Link to="/about" onClick={window.scroll(0, 0)}>
+                <Link to="/ContactPage" onClick={window.scroll(0, 0)}>
                   Контакты
                 </Link>
               </li>
