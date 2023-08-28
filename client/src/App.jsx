@@ -10,6 +10,7 @@ import ServicePage from "./components/ServicePage";
 import PriseList from "./components/PriseList";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import ContactPage from "./components/ContactPage";
+import Service from "./components/Service";
 
 function App() {
   const [isRotated, setIsRotated] = useState(false);
@@ -47,7 +48,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/about" element={<AboutClinicPage />} />
-
+            <Route path="/Service" element={<Service/>} />
             <Route
               path="/service-anesthesia"
               element={

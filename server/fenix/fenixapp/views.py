@@ -9,7 +9,7 @@ from rest_framework import status
 import telebot
 
 def index(request):
-    return HttpResponse("Hello METANIT.COM")
+    return HttpResponse("Hello")
 
 
 def price_list(request):

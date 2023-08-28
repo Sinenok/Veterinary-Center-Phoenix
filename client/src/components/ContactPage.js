@@ -21,7 +21,7 @@ function ContactPage() {
                     <img src={vk} alt="Logo" className="logo_vk" />
                 </div>
                 <div className="block" id="block2">
-                <img src={dog} alt="Dog" className="photo" />
+                    <img src={dog} alt="Dog" className="photo" />
                 </div>
                 <div className="block" id="block4">
                     <h1>Вставить таблицу</h1>

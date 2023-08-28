@@ -3,6 +3,7 @@ import "./../styles/oleg.css";
 import plus from "./../img/price/plus.png"
 import minus from './../img/price/minus-sign.png'
 import HeaderBanner from "./HeaderBanner"
+import EnrollComponent from './EnrollComponent';
 
 const ServiceBlock = ({ title, services, index }) => {
     const [isExpanded, setExpanded] = useState(false);
@@ -90,7 +91,7 @@ const ServiceBlock = ({ title, services, index }) => {
 
       const about = "Цены";
       return (
-    <div>
+    <div className='PriseList'>
         <HeaderBanner headTitle={about} />
         <div className='wrapperServices'>
             {data &&
@@ -108,6 +109,7 @@ const ServiceBlock = ({ title, services, index }) => {
           </div>
         ))}
         </div>
+        <EnrollComponent></EnrollComponent>
     </div>
   );
 };
