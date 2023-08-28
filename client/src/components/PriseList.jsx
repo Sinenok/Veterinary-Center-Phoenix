@@ -80,7 +80,7 @@ const ServiceBlock = ({ title, services, index }) => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/price_list') 
+        fetch('https://steamget.ru/price_list') 
             .then(response => response.json())
             .then(jsonData => {
                 console.log(jsonData); 
