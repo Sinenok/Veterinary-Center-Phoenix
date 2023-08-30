@@ -294,6 +294,7 @@ body {
   position: absolute;
   top: 100%;
   left: -2px;
+  z-index: 99;
   /* border: 1px solid green; */
 }
 
@@ -1563,6 +1564,7 @@ body {
 .photo-reviews-img {
   width: 66px;
   height: 66px;
+  border-radius: 100%;
 }
 .card-reviews__title {
   /* border: 2px solid green; */

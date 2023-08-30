@@ -7,29 +7,31 @@ const PriceTable = ({ services }) => {
      console.log(services);
     
     return (
-      <table className="service-table">
-      <tbody>
-        {services[0].map((service, index) => (
-         
-          <tr key={index}>
+    <div className='tableWrapperService'> 
+        <table className="service-table">
+        <tbody>
+            {services[0].map((service, index) => (
             
-            {(services[1][index] == "" && services[2][index] == "") ? 
-            (
-                <td colSpan="3" className='subtitleth'>{service}</td>
-            ):
-            (
-                <>
-                <td>{service}</td>
-                <td>{services[1][index]}</td>
-                <td>{services[2][index]}</td>
-            </>
-            )
-            }
-            
-          </tr>
-        ))}
-      </tbody>
-    </table>
+            <tr key={index}>
+                
+                {(services[1][index] == "" && services[2][index] == "") ? 
+                (
+                    <td colSpan="3" className='subtitleth'>{service}</td>
+                ):
+                (
+                    <>
+                    <td>{service}</td>
+                    <td>{services[1][index]}</td>
+                    <td>{services[2][index]}</td>
+                </>
+                )
+                }
+                
+            </tr>
+            ))}
+        </tbody>
+        </table>
+    </div>
     );
   };
   
