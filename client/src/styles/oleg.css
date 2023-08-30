@@ -530,7 +530,7 @@ ________________________________________________________________________________
 
     width: calc(24% - 20px);
     min-height: 250px;
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
     border: 1px solid #F07E00 ;
     border-radius: 17px;
     margin-bottom: 20px;

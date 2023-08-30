@@ -8,12 +8,16 @@ from rest_framework.response import Response
 from rest_framework import status
 import telebot
 
+
+
 def index(request):
     return HttpResponse("Hello")
 
 
 def price_list(request):
-    result = parse('fenixapp/workfile/Preyskurant_Fenix_Oktyabr_2022.xlsx')
+    import json
+    with open("data.json", 'r',encoding='utf-8') as file:
+        result = json.load(file)
     return JsonResponse(result)
 
 @api_view(['POST'])
