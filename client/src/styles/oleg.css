@@ -164,8 +164,21 @@
   margin-bottom: 3%;
   margin-top: 3%;
   display: flex;
+  /* border: 2px solid black; */
 }
-
+.contact-map-conteiner {
+  /* border: 2px solid black; */
+  padding: 0 10px;
+  margin-bottom: 3%;
+}
+@media (max-width: 750px) {
+  .contact-map-conteiner {
+    margin-bottom: 50px;
+  }
+}
+.contact-map-conteiner .main-map-item {
+  width: 100%;
+}
 #block1,
 #block2 {
   flex: 1;

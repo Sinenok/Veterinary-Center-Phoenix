@@ -29,6 +29,9 @@ import { useNavigate } from "react-router-dom";
 import MainForm from "../components/MainForm";
 import EnrollComponent from "../components/EnrollComponent";
 import Specialists from "../components/Specialists";
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
+import mapIcon from "./../img/main-page/mapIcon.png";
+import MapClinic from "../components/MapClinic";
 
 const MainPage = () => {
   const reviews = [
@@ -681,11 +684,16 @@ const MainPage = () => {
         <div className="map-contacts__wrapper">
           <div className="map-contacts__main-title main-title">
             <div className="map-contacts__button buttons-category">
-              <button className="buttons-category__contacts">Контакты</button>
+              <button
+                onClick={() => console.log("dsadadsa")}
+                className="buttons-category__contacts"
+              >
+                Контакты
+              </button>
             </div>
             <div className="map-contacts__map main-map">
               <div className="main-map__wrapper">
-                <img className="main__map-img" alt="" src={mainMap} />
+                <MapClinic />
                 <div className="map-info-card">
                   <div className="map-info-card__icon">
                     <div className="map-info-card__icon-bird">

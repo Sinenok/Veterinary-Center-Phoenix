@@ -4,6 +4,7 @@ import vk from "./../img/contacts/vk.png";
 import dog from "./../img/contacts/Rectangle80.png";
 import HeaderBanner from "./HeaderBanner";
 import mainMap from "./../img/main-page/map-contact.png";
+import MapClinic from "./MapClinic";
 
 function ContactPage() {
   const about = "Контакты";
@@ -104,9 +105,9 @@ function ContactPage() {
             <img src={dog} alt="Dog" className="photo" />
           </div>
           <div className="block" id="block4">
-            <div className="main-map__wrapper">
-              <img className="main__map-img" alt="" src={mainMap} />
-            </div>
+            {/* <div className="main-map__wrapper">
+              <MapClinic />
+            </div> */}
           </div>
         </div>
         <div className="block" id="block3">
@@ -178,6 +179,11 @@ function ContactPage() {
               </div>
             </div>
           </form>
+        </div>
+      </div>
+      <div className="contact-map-conteiner">
+        <div className="main-map__wrapper">
+          <MapClinic />
         </div>
       </div>
     </div>
