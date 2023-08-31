@@ -1,5 +1,5 @@
-.PriseList{
-    margin-bottom: 4%;
+.PriseList {
+  margin-bottom: 4%;
 }
 .service-block {
   position: relative;
@@ -100,15 +100,15 @@
 .wrapper-services {
   min-height: auto;
 }
-.wrapperServices{
-    margin-top: 3%;
-    margin-bottom: 3%;
-    margin-left: 11%;
+.wrapperServices {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-left: 11%;
 }
 @media (max-width: 1450px) {
-    .wrapperServices{
-        margin-left: 15%;
-    }
+  .wrapperServices {
+    margin-left: 15%;
+  }
 }
 @media (max-width: 850px) {
   .wrapperServices {
@@ -186,6 +186,7 @@
 }
 .contact-map-conteiner .main-map-item {
   width: 100%;
+  height: 600px;
 }
 #block1,
 #block2 {
@@ -221,6 +222,21 @@
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 17px;
+}
+#block3 .record__form.submit {
+  width: auto;
+  height: 100%;
+  align-items: center;
+}
+#block3 .submit__title {
+  color: #000;
+  font-size: 24px;
+}
+@media (max-width: 450px) {
+  #block3 .submit__title {
+    color: #000;
+    font-size: 18px;
+  }
 }
 #block3 .record__subtitle {
   font-family: "Open Sans", sans-serif;
@@ -401,11 +417,11 @@
 
 /*--------------------------------------------------------------------------------------------------*/
 .ServicePage {
-    margin-bottom: 4%;
-  }
-.ServiceBlock{
-    margin-top: 3vh;
-    display: flex;
+  margin-bottom: 4%;
+}
+.ServiceBlock {
+  margin-top: 3vh;
+  display: flex;
 }
 .ServiceBlock {
   margin-top: 3vh;
@@ -464,11 +480,11 @@
   font-size: 16px;
   line-height: 21px;
 }
-.tableWrapperService{
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    margin-top: 20px;
-    margin-bottom: 3%;
+.tableWrapperService {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 3%;
 }
 .service-table {
   /*  */
@@ -489,116 +505,107 @@
   padding: 8px;
 }
 .service-table tr {
-    border-bottom: 1px solid #ccc !important;
-  }
+  border-bottom: 1px solid #ccc !important;
+}
 
 .service-table tr:first-child {
   background-color: #f9fbfc;
-  
 }
 .service-table td:first-child {
   padding-left: 25px;
 }
-.service-table tr:first-child td:first-child{ 
-    border-top-left-radius: 23px;
+.service-table tr:first-child td:first-child {
+  border-top-left-radius: 23px;
 }
-.service-table tr:first-child td:last-child{ 
-    border-top-right-radius: 23px;
+.service-table tr:first-child td:last-child {
+  border-top-right-radius: 23px;
 }
-.service-table tr:last-child{
-    border-bottom: 0px solid #ccc !important;
+.service-table tr:last-child {
+  border-bottom: 0px solid #ccc !important;
 }
-
 
 @media (max-width: 850px) {
-    .ServiceBlock{
-        flex-direction: column;
-    }
-    .CenterBlock {
-        margin-right: 0%;
-    
-      }
-
+  .ServiceBlock {
+    flex-direction: column;
+  }
+  .CenterBlock {
+    margin-right: 0%;
+  }
 }
 @media (max-width: 550px) {
-    .CenterBlock > p{
-       
-        font-size: 11px;
-        line-height: 18px;
-      }
-      
-    .CenterFill > p{
-      
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 25px;
-    }
-    .service-table{
+  .CenterBlock > p {
+    font-size: 11px;
+    line-height: 18px;
+  }
+
+  .CenterFill > p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .service-table {
     font-size: 13px;
     font-weight: 400;
     line-height: 18px;
-    }
+  }
 }
 
 /* 
 __________________________________________________________________________________________ */
-.Service{
-    margin-bottom: 3%;
+.Service {
+  margin-bottom: 3%;
 }
 
 .wrapperServiceblock {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 2%;
-  }
-  
-  
-  .block_service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2%;
+}
 
-    width: calc(24% - 20px);
-    min-height: 250px;
-    /* background-color: #fafafa; */
-    border: 1px solid #F07E00 ;
-    border-radius: 17px;
-    margin-bottom: 20px;
+.block_service {
+  width: calc(24% - 20px);
+  min-height: 250px;
+  /* background-color: #fafafa; */
+  border: 1px solid #f07e00;
+  border-radius: 17px;
+  margin-bottom: 20px;
 
-    display: flex;
-    flex-direction: column;
-  }
-  .blockFake{
-    background-color: #fff;
-    border: 0;
-  }
+  display: flex;
+  flex-direction: column;
+}
+.blockFake {
+  background-color: #fff;
+  border: 0;
+}
 
-  .block_service .photo{
-    /* width: 100%;
+.block_service .photo {
+  /* width: 100%;
      height: 100%;
     object-fit: cover; */
-    border-radius: 17px;
+  border-radius: 17px;
+}
+.blockdisplay {
+  display: block;
+}
+@media (max-width: 850px) {
+  .block_service {
+    flex-basis: 45%;
+    min-height: 250px;
   }
-  .blockdisplay{
-    display: block;
+  .blockFake {
+    display: none;
   }
-  @media (max-width: 850px) {
-    .block_service{
-        flex-basis: 45%;
-        min-height: 250px;
-    }
-    .blockFake{
-        display: none;
-    }
-    
+}
+@media (max-width: 550px) {
+  .block_service {
+    min-height: 150px;
   }
-  @media (max-width: 550px) {
-    .block_service{
-        min-height: 150px;
-    }
-    .block_service .advantages-cards__title{
-        padding: 9px 10px 5px 10px;
-    }
-    .block_service .advantages-cards__desctription{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+  .block_service .advantages-cards__title {
+    padding: 9px 10px 5px 10px;
   }
+  .block_service .advantages-cards__desctription {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

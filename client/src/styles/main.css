@@ -2013,6 +2013,46 @@ body {
     padding: 33px 20px 23px 20px;
   }
 }
+
+.record__form.submit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 200px; */
+}
+@media (max-width: 490px) {
+  .record__form.submit {
+    padding: 33px;
+  }
+}
+.submit__title {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
+  /* border: 2px solid black; */
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .submit__title {
+    font-size: 44px;
+  }
+}
+@media (max-width: 750px) {
+  .submit__title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 570px) {
+  .submit__title {
+    font-size: 25px;
+  }
+}
+@media (max-width: 450px) {
+  .submit__title {
+    font-size: 19px;
+  }
+}
 .main-form__cat {
   position: absolute;
   right: 67px;

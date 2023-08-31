@@ -7,15 +7,24 @@ import specialistOrlov from "./../img/main-page/specialists/Orlov.png";
 import specialistMikhailova from "./../img/main-page/specialists/Mikhailova.png";
 import specialistKhusnutdinova from "./../img/main-page/specialists/Khusnutdinova.png";
 import iconPaw from "./../img/main-page/specialists/paw.svg";
+import { useNavigate } from "react-router-dom";
 
 const Specialists = () => {
+  const navigate = useNavigate();
+  const aboutHandleClick = (value) => {
+    window.scroll(0, 0);
+    navigate(`/${value}`);
+  };
   return (
     <>
       <div className="in-safe-hands">
         <div className="in-safe-hands__wrapper">
           <div className="in-safe-hand__main-title main-title">
             <div className="in-safe-hand__button buttons-category">
-              <button className="buttons-category__specialists">
+              <button
+                onClick={() => aboutHandleClick("specialists")}
+                className="buttons-category__specialists"
+              >
                 Специалисты
               </button>
             </div>
@@ -95,7 +104,10 @@ const Specialists = () => {
           </div>
         </div>
         <div className="in-safe-hands__all-specialists-btn">
-          <button className="all-specialists-btn">
+          <button
+            onClick={() => aboutHandleClick("specialists")}
+            className="all-specialists-btn"
+          >
             Смотреть всех специалистов
           </button>
           <img className="all-specialists-icon" alt="" src={iconPaw} />

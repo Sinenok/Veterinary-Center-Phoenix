@@ -5,10 +5,11 @@ import dog from "./../img/contacts/Rectangle80.png";
 import HeaderBanner from "./HeaderBanner";
 import mainMap from "./../img/main-page/map-contact.png";
 import MapClinic from "./MapClinic";
+import FormSubmit from "./FormSubmit";
 
 function ContactPage() {
   const about = "Контакты";
-
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     recordName: "",
     recordPhone: "",
@@ -61,9 +62,13 @@ function ContactPage() {
       });
       if (response.ok) {
         console.log("Данные успешно отправлены");
+        setIsSubmitted(true);
       }
     } catch (error) {
       console.error("Произошла ошибка при отправке данных", error);
+      alert(
+        "Произошла ошибка при отправке данных, попробуйте еще раз\n" + error
+      );
     }
   };
 
@@ -111,74 +116,78 @@ function ContactPage() {
           </div>
         </div>
         <div className="block" id="block3">
-          <form className="main-form" onSubmit={handleSubmit}>
-            <div className="record__form">
-              <div className="record__title">У вас есть вопросы?</div>
-              <div className="record__subtitle">
-                Мы всегда на связи и готовы помочь
-              </div>
-              <div className="record__inputs">
-                <div className="record__input-group">
-                  <input
-                    autoComplete="off"
-                    placeholder=" "
-                    className="record-input"
-                    required
-                    name="recordName"
-                    type="text"
-                    value={formData.recordName}
-                    onChange={handleInputChange}
-                  />
-                  <label className="record-label">Ваше имя</label>
+          {isSubmitted ? (
+            <FormSubmit />
+          ) : (
+            <form className="main-form" onSubmit={handleSubmit}>
+              <div className="record__form">
+                <div className="record__title">У вас есть вопросы?</div>
+                <div className="record__subtitle">
+                  Мы всегда на связи и готовы помочь
                 </div>
-                <div className="record__input-group">
-                  <input
-                    autoComplete="off"
-                    placeholder=" "
-                    className="record-input"
-                    required
-                    name="recordPhone"
-                    type="tel"
-                    // pattern="\+7\d{10}"
-                    maxLength={15}
-                    value={formData.recordPhone}
-                    onChange={handleInputChange}
-                  />
-                  <label className="record-label">Номер телефона</label>
+                <div className="record__inputs">
+                  <div className="record__input-group">
+                    <input
+                      autoComplete="off"
+                      placeholder=" "
+                      className="record-input"
+                      required
+                      name="recordName"
+                      type="text"
+                      value={formData.recordName}
+                      onChange={handleInputChange}
+                    />
+                    <label className="record-label">Ваше имя</label>
+                  </div>
+                  <div className="record__input-group">
+                    <input
+                      autoComplete="off"
+                      placeholder=" "
+                      className="record-input"
+                      required
+                      name="recordPhone"
+                      type="tel"
+                      // pattern="\+7\d{10}"
+                      maxLength={15}
+                      value={formData.recordPhone}
+                      onChange={handleInputChange}
+                    />
+                    <label className="record-label">Номер телефона</label>
+                  </div>
+                  <div className="record__input-group">
+                    <input
+                      autoComplete="off"
+                      placeholder=" "
+                      className="record-input"
+                      required
+                      name="recordComent"
+                      type="textarea "
+                      value={formData.recordComent}
+                      onChange={handleInputChange}
+                    />
+                    <label className="record-label">Комментарий</label>
+                  </div>
                 </div>
-                <div className="record__input-group">
-                  <input
-                    autoComplete="off"
-                    placeholder=" "
-                    className="record-input"
-                    required
-                    name="recordComent"
-                    type="textarea "
-                    value={formData.recordComent}
-                    onChange={handleInputChange}
-                  />
-                  <label className="record-label">Комментарий</label>
+                <div className="record__button-form">
+                  <button className="record__button-submit" type="submit">
+                    Записаться на консультацию
+                  </button>
+                </div>
+                <div className="record__checkbox">
+                  <label>
+                    <input
+                      required
+                      className="record__checbox-agreement-real"
+                      type="checkbox"
+                      name="recordCheckbox"
+                    />
+                    <span className="record__checbox-agreement-custom"></span>
+                    Даю согласие на обработку данных
+                  </label>
                 </div>
               </div>
-              <div className="record__button-form">
-                <button className="record__button-submit" type="submit">
-                  Записаться на консультацию
-                </button>
-              </div>
-              <div className="record__checkbox">
-                <label>
-                  <input
-                    required
-                    className="record__checbox-agreement-real"
-                    type="checkbox"
-                    name="recordCheckbox"
-                  />
-                  <span className="record__checbox-agreement-custom"></span>
-                  Даю согласие на обработку данных
-                </label>
-              </div>
-            </div>
-          </form>
+            </form>
+          )}
         </div>
       </div>
       <div className="contact-map-conteiner">

@@ -9,6 +9,7 @@ import specialistKhusnutdinova from "./../img/main-page/specialists/Khusnutdinov
 import iconPaw from "./../img/main-page/specialists/paw.svg";
 import Specialists from "../components/Specialists";
 import HeaderBanner from "../components/HeaderBanner";
+import EnrollComponent from "../components/EnrollComponent";
 
 const SpecialistsPage = () => {
   const specialists = "Специалисты";
@@ -17,6 +18,7 @@ const SpecialistsPage = () => {
       <div className="SpecialistsPage-wrapper">
         <HeaderBanner headTitle={specialists} />
         <Specialists />
+        <EnrollComponent />
       </div>
     </div>
   );

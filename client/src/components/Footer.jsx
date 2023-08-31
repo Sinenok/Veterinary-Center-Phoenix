@@ -18,7 +18,7 @@ function Footer() {
             </Link>
           </li>
           <li className="f-links__item">
-            <Link to="/" onClick={() => window.scroll(0, 0)}>
+            <Link to="/Service" onClick={() => window.scroll(0, 0)}>
               Услуги
             </Link>
           </li>

@@ -13,10 +13,10 @@ import coment1 from "./../img/main-page/reviews/comment1.png";
 import coment2 from "./../img/main-page/reviews/comment2.png";
 import coment3 from "./../img/main-page/reviews/comment3.png";
 import coment4 from "./../img/main-page/reviews/comment4.png";
-import coment8 from "./../img/main-page/reviews/5HLWqjv-PY4.jpg"
-import coment7 from "./../img/main-page/reviews/pcJhdKLNaqo.jpg"
-import coment6 from "./../img/main-page/reviews/-91w_yzpsCsJ-cDFLUDVGR5r_n52iuPAOfxETeYuYUPYOx_XoYT1G33ZCQbpkpv2_F3yAWUHY-zwPDYz8-eQym9K.jpg"
-import coment5 from "./../img/main-page/reviews/qwMS8N3slgU.png"
+import coment8 from "./../img/main-page/reviews/5HLWqjv-PY4.jpg";
+import coment7 from "./../img/main-page/reviews/pcJhdKLNaqo.jpg";
+import coment6 from "./../img/main-page/reviews/-91w_yzpsCsJ-cDFLUDVGR5r_n52iuPAOfxETeYuYUPYOx_XoYT1G33ZCQbpkpv2_F3yAWUHY-zwPDYz8-eQym9K.jpg";
+import coment5 from "./../img/main-page/reviews/qwMS8N3slgU.png";
 import iconPaw2 from "./../img/main-page/reviews/paw2.svg";
 import prepCircle from "./../img/main-page/preparation-for-the-reception/prepCircle.svg";
 import stepUp from "./../img/main-page/preparation-for-the-reception/stepUp.svg";
@@ -68,40 +68,36 @@ const MainPage = () => {
         "Хотим сказать большое спасибо клинике Феникс за проведенную нашей кошечке Милке стерилизацию, операцию перенесли легко, с наименьшим стрессом, счастливые прыгаем-бегаем дома) ",
     },
     {
-        id: 5,
-        name: "Лариса Ларина",
-        photo: coment5,
-        coment:
+      id: 5,
+      name: "Лариса Ларина",
+      photo: coment5,
+      coment:
         "Очень хочу поблагодарить клинку и хирурга Маргариту Олеговну (надеюсь, не ошиблась с именем) за прекрасную операцию по стерилизации нашей девочки. Очень переживали и волновались, но всё прошло хорошо. Доктор побеседовала до операции, всё рассказала как будет происходить, и потом после общалась со мной, т.к. я очень сильно переживала.Наблюдаемся в клинике уже третий год и очень довольны. Приятно видеть теплое и участливое отношение к нашим питомцам. Удачи и процветания!",
-
     },
     {
-        id: 6,
-        name: "Наталья Васильева",
-        photo: coment6,
-        coment:
-            "Спасибо за быстрый прием и ренген моего мопса,кнопку мы нашли.хорошо что она ее не проглотила."
+      id: 6,
+      name: "Наталья Васильева",
+      photo: coment6,
+      coment:
+        "Спасибо за быстрый прием и ренген моего мопса,кнопку мы нашли.хорошо что она ее не проглотила.",
     },
     {
-        id: 7,
-        name: "Ирка Халиф",
-        photo: coment7,
-        coment:
+      id: 7,
+      name: "Ирка Халиф",
+      photo: coment7,
+      coment:
         "Хотим сказать большое спасибо клинике 'Феникс' за проведенную нашей кошечке Милке стерилизацию, операцию перенесли легко, с наименьшим стрессом, счастливые прыгаем-бегаем дома)",
-
     },
     {
-        id: 8,
-        name: "Ольга Трофимова",
-        photo: coment8,
-        coment:
+      id: 8,
+      name: "Ольга Трофимова",
+      photo: coment8,
+      coment:
         "Выражаю огромную благодарность нашему лечащему врачу,- Никитиной Инге Александровне☺️ Мы с мужем и кошками просто счастливы, что нам так повезло попасть именно к ней. Я вообще не думала, что бывают такие ветеринары, без шуток, мы много где побывали.",
-
     },
-
   ];
 
-  const shuffledReviews = reviews.sort(() => 0.5 - Math.random()); 
+  const shuffledReviews = reviews.sort(() => 0.5 - Math.random());
 
   const randomReviews = shuffledReviews.slice(0, 4);
 
@@ -507,7 +503,7 @@ const MainPage = () => {
             <div className="button__yandexreviews reviews-btns">
               <a
                 // Исправить ссылку на отзывы яндекса
-                href="https://vk.com/fenixvetgroup?w=app6326142_-167831658"
+                href="https://yandex.ru/maps/org/feniks/83872204934/reviews/?ll=30.459946%2C59.868911&z=18"
                 className="reviews-btns__yandexreviews"
               >
                 Читать все отзывы на Яндекс
@@ -726,7 +722,7 @@ const MainPage = () => {
           <div className="map-contacts__main-title main-title">
             <div className="map-contacts__button buttons-category">
               <button
-                onClick={() => console.log("dsadadsa")}
+                onClick={() => aboutHandleClick("ContactPage")}
                 className="buttons-category__contacts"
               >
                 Контакты

@@ -5,7 +5,7 @@ import mainIcon from "./../img/main-page/Icon.svg";
 import mainIconMedia from "./../img/main-page/Icon-media.svg";
 import hamburgerMenu from "./../img/main-page/hamburger-menu.svg";
 import closeBurger from "./../img/main-page/closeBurger.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = ({
   handleMouseEnter,
@@ -29,24 +29,56 @@ const Header = ({
       navBtnImg.src = hamburgerMenu;
     }
   };
+  const searchBurgerState = () => {
+    const nav = document.querySelector("#nav");
+    const navBtn = document.querySelector("#navBtn");
+    const navBtnImg = document.querySelector("#navBtnImg");
+    const body = document.querySelector(".body");
+    if (nav.classList.contains("open")) {
+      nav.classList.remove("open");
+      body.classList.toggle("open");
+      navBtn.classList.toggle("close");
+      navBtnImg.src = hamburgerMenu;
+    }
+  };
+  const toggleBurgerLinks = () => {
+    window.scroll(0, 0);
+    searchBurgerState();
+  };
+
+  const navigate = useNavigate();
+  const aboutHandleClick = (value) => {
+    navigate(`/${value}`);
+    searchBurgerState();
+    setTimeout(() => {
+      const element = document.getElementById("record-form");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 0);
+  };
   return (
     <div className="Header">
       <nav id="nav" className="nav">
         <div className="container">
           <div className="nav__row">
             <div className="nav__logo logo">
-              <Link onClick={() => window.scroll(0, 0)} to="/">
+              <Link onClick={toggleBurgerLinks} to="/">
                 <img className="logo__img" alt="" src={mainLogo} />
               </Link>
             </div>
             <ul className="nav__list-links list">
               <li className="list__item">
-                <Link to="/about" onClick={() => window.scroll(0, 0)}>
-                  О наc
+                <Link
+                  onClick={toggleBurgerLinks}
+                  to="/about"
+                  // onClick={() => window.scroll(0, 0)}
+                >
+                  О нас
                 </Link>
               </li>
               <li className="list__item">
-                <Link to="/specialists" onClick={() => window.scroll(0, 0)}>
+                <Link to="/specialists" onClick={toggleBurgerLinks}>
                   Специалисты
                 </Link>
               </li>
@@ -58,7 +90,7 @@ const Header = ({
               >
                 <ul className="list-services">
                   <Link
-                    onClick={() => window.scroll(0, 0)}
+                    onClick={toggleBurgerLinks}
                     className="link-down"
                     to={screenWidth > 1230 ? "/Service" : "/Service"}
                   >
@@ -161,12 +193,12 @@ const Header = ({
                 )}
               </li>
               <li className="list__item">
-                <Link to="/PriceList" onClick={window.scroll(0, 0)}>
+                <Link to="/PriceList" onClick={toggleBurgerLinks}>
                   Цены
                 </Link>
               </li>
               <li className="list__item">
-                <Link to="/ContactPage" onClick={window.scroll(0, 0)}>
+                <Link to="/ContactPage" onClick={toggleBurgerLinks}>
                   Контакты
                 </Link>
               </li>
@@ -184,7 +216,12 @@ const Header = ({
               </li>
             </ul>
             <div className="nav-button">
-              <button className="nuv-button__entry">Записаться</button>
+              <button
+                onClick={() => aboutHandleClick("")}
+                className="nuv-button__entry"
+              >
+                Записаться
+              </button>
             </div>
           </div>
         </div>
