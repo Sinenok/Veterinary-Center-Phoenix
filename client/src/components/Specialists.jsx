@@ -10,6 +10,41 @@ import iconPaw from "./../img/main-page/specialists/paw.svg";
 import { useNavigate } from "react-router-dom";
 
 const Specialists = () => {
+  const specialistsList = [
+    {
+      id: 1,
+      name: "Орлова Мария Николаевна",
+      photo: specialistOrlova,
+      description:
+        "Главный ветеринарный врач Центра, репродуктолог- неонатолог, специалист ультразвуковой диагностики",
+    },
+    {
+      id: 2,
+      name: "Магер Алиса",
+      photo: specialistMager,
+      description: "Анестезиолог",
+    },
+    {
+      id: 3,
+      name: "Орлов Павел Георгиевич",
+      photo: specialistOrlov,
+      description:
+        "Ветеринарный врач-кардиолог, хирург, ортопед, специалист ультразвуковой диагностики, генеральный директор",
+    },
+    {
+      id: 4,
+      name: "Михайлова Светлана",
+      photo: specialistMikhailova,
+      description: "Грумер",
+    },
+    {
+      id: 5,
+      name: "Хуснутдинова Диана Маратовна",
+      photo: specialistKhusnutdinova,
+      description: "Ветеринарный врач-терапевт, неонатолог",
+    },
+  ];
+
   const navigate = useNavigate();
   const aboutHandleClick = (value) => {
     window.scroll(0, 0);
@@ -34,73 +69,21 @@ const Specialists = () => {
             </div>
           </div>
           <div className="specialists-cards">
-            <div className="specialists-cards__wrapper">
-              <div className="specialists-cards__photo photo">
-                <img className="photo-img" alt="" src={specialistOrlova} />
-              </div>
-              <div className="specialists-cards__info">
-                <div className="specialists-cards__title">
-                  Орлова Мария Николаевна
+            {specialistsList.map((specialist) => (
+              <div key={specialist.id} className="specialists-cards__wrapper">
+                <div className="specialists-cards__photo photo">
+                  <img className="photo-img" alt="" src={specialist.photo} />
                 </div>
-                <div className="specialists-cards__desctription">
-                  Главный ветеринарный врач Центра, репродуктолог- неонатолог,
-                  специалист ультразвуковой диагностики
-                </div>
-              </div>
-            </div>
-            <div className="specialists-cards__wrapper">
-              <div className="specialists-cards__photo photo">
-                <img className="photo-img" alt="" src={specialistMager} />
-              </div>
-              <div className="specialists-cards__info">
-                <div className="specialists-cards__title">Магер Алиса</div>
-                <div className="specialists-cards__desctription">
-                  Анестезиолог
+                <div className="specialists-cards__info">
+                  <div className="specialists-cards__title">
+                    {specialist.name}
+                  </div>
+                  <div className="specialists-cards__desctription">
+                    {specialist.description}
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="specialists-cards__wrapper">
-              <div className="specialists-cards__photo photo">
-                <img className="photo-img" alt="" src={specialistOrlov} />
-              </div>
-              <div className="specialists-cards__info">
-                <div className="specialists-cards__title">
-                  Орлов Павел Георгиевич
-                </div>
-                <div className="specialists-cards__desctription">
-                  Ветеринарный врач-кардиолог, хирург, ортопед, специалист
-                  ультразвуковой диагностики, генеральный директор
-                </div>
-              </div>
-            </div>
-            <div className="specialists-cards__wrapper">
-              <div className="specialists-cards__photo photo">
-                <img className="photo-img" alt="" src={specialistMikhailova} />
-              </div>
-              <div className="specialists-cards__info">
-                <div className="specialists-cards__title">
-                  Михайлова Светлана
-                </div>
-                <div className="specialists-cards__desctription">Грумер</div>
-              </div>
-            </div>
-            <div className="specialists-cards__wrapper">
-              <div className="specialists-cards__photo photo">
-                <img
-                  className="photo-img"
-                  alt=""
-                  src={specialistKhusnutdinova}
-                />
-              </div>
-              <div className="specialists-cards__info">
-                <div className="specialists-cards__title">
-                  Хуснутдинова Диана Маратовна
-                </div>
-                <div className="specialists-cards__desctription">
-                  Ветеринарный врач-терапевт, неонатолог
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
         <div className="in-safe-hands__all-specialists-btn">
