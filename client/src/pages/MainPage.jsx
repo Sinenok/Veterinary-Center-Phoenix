@@ -17,6 +17,7 @@ import coment8 from "./../img/main-page/reviews/5HLWqjv-PY4.jpg";
 import coment7 from "./../img/main-page/reviews/pcJhdKLNaqo.jpg";
 import coment6 from "./../img/main-page/reviews/-91w_yzpsCsJ-cDFLUDVGR5r_n52iuPAOfxETeYuYUPYOx_XoYT1G33ZCQbpkpv2_F3yAWUHY-zwPDYz8-eQym9K.jpg";
 import coment5 from "./../img/main-page/reviews/qwMS8N3slgU.png";
+import videogif1 from "./../img/main-page/reviews/giphy.gif"
 import iconPaw2 from "./../img/main-page/reviews/paw2.svg";
 import prepCircle from "./../img/main-page/preparation-for-the-reception/prepCircle.svg";
 import stepUp from "./../img/main-page/preparation-for-the-reception/stepUp.svg";
@@ -218,6 +219,7 @@ const MainPage = () => {
         <div className="card-services__wrapper">
           <div className="card-services__title">Неонатология</div>
           <div className="card-services__desctription">
+            {/* <img src={videogif1}></img> */}
             Наши ветеринарные специалисты имеют глубокие
             <br />
             знания и опыт в области раннего развития и здоровья маленьких

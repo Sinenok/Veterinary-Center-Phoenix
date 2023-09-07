@@ -17,10 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from fenixapp import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.index, name="home"),
     re_path(r"price_list",views.price_list),
     re_path(r"api/formback/", views.form_back_view, name='formback'),
-
+    re_path(r"specialists", views.specialists ),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1675,14 +1675,19 @@ body {
   width: 18.81px;
   height: 17.231px;
   transform: rotate(-14.38deg);
+  transition: all 0.5s ease-out;
   position: absolute;
   bottom: 15.13px;
   right: 20.7px;
 }
+
 .button__yandexreviews {
   border: 1px solid #f17f01;
   background: #fff;
 }
+.button__yandexreviews:hover .reviews-btns__icon{
+    transform: rotate(10deg);
+  }
 .reviews-btns__yandexreviews {
   align-self: center;
   text-align: center;

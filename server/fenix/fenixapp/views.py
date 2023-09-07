@@ -1,13 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from fenixapp.workfile.parse import *
 from django.http import JsonResponse
 
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 import telebot
-
+import os
 
 
 def index(request):
@@ -19,6 +18,13 @@ def price_list(request):
     with open("data.json", 'r',encoding='utf-8') as file:
         result = json.load(file)
     return JsonResponse(result)
+
+
+def specialists(request):
+    import json
+    with open("spec.json", 'r', encoding='utf-8') as file:
+        result = json.load(file)
+    return JsonResponse(result, safe=False)
 
 @api_view(['POST'])
 def form_back_view(request):
