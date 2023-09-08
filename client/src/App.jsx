@@ -17,7 +17,9 @@ import SpecialistsPage from "./pages/SpecialistsPage";
 
 function App() {
   const servicesRoutes = [
-    { path: "/service-anesthesia", about: "Анестезия и интенсивная терапия" },
+    { path: "/service-anesthesia", 
+      about: "Анестезия и интенсивная терапия",
+    },
     {
       path: "/service-grooming",
       about: "Груминг животных, косметические манипуляции, окрашивание",
