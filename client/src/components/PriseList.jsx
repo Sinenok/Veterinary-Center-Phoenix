@@ -75,7 +75,7 @@ const ServiceBlock = ({ title, services, index }) => {
     );
   };
   
-  const PriseList = () => {
+  const   PriseList = () => {
 
     const [data, setData] = useState(null);
 

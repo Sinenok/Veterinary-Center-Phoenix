@@ -15,8 +15,79 @@ import Service from "./components/Service";
 
 import SpecialistsPage from "./pages/SpecialistsPage";
 
-
 function App() {
+  const servicesRoutes = [
+    { path: "/service-anesthesia", about: "Анестезия и интенсивная терапия" },
+    {
+      path: "/service-grooming",
+      about: "Груминг животных, косметические манипуляции, окрашивание",
+    },
+    {
+      path: "/service-dermatology",
+      about: "Дерматология",
+    },
+    {
+      path: "/service-castration",
+      about: "Кастрация и стерилизация",
+    },
+    {
+      path: "/service-laboratory-diagnostics",
+      about: "Лабораторная диагностика",
+    },
+    {
+      path: "/service-surgery",
+      about: "Общая хирургия",
+    },
+    {
+      path: "/service-oncology",
+      about: "Онкология",
+    },
+    {
+      path: "/service-doctor-visit",
+      about: "Прием врача и амбулаторные процедуры",
+    },
+    {
+      path: "/service-reproduction",
+      about: "Репродукция",
+    },
+    {
+      path: "/service-maternity-and-neonatology",
+      about: "Родильное отделение и отделение неонатологии",
+    },
+    { path: "/service-hospital", about: "Стационар" },
+    { path: "/service-dentistry", about: "Стоматология" },
+    {
+      path: "/service-traumatology-and-orthopedics",
+      about: "Травматология и ортопедия",
+    },
+    { path: "/service-urology-gynecology", about: "Урология, гинекология" },
+    { path: "/service-surgical-procedures", about: "Хирургические процедуры" },
+    {
+      path: "/service-euthanasia-and-funeral",
+      about: "Эутаназия и ритуальные услуги",
+    },
+    // ----------------------------------------------------------------------------------------------------------
+    {
+      path: "/service-ultrasonography",
+      about: "Ультразвуковое исследование",
+    },
+    {
+      path: "/service-endoscopy-and-endosurgery",
+      about: "Эндоскопия и эндохирургия",
+    },
+    {
+      path: "/service-spinal-surgery-and-neurology",
+      about: "Операции на позвоночнике и неврология",
+    },
+    {
+      path: "/service-plastic-surgery",
+      about: "Пластические операции",
+    },
+    {
+      path: "/service-operations-on-the-head",
+      about: "Операции на голове",
+    },
+  ];
   const [isRotated, setIsRotated] = useState(false);
   function handleClick(e) {
     // console.log(e.target);
@@ -52,91 +123,15 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/about" element={<AboutClinicPage />} />
-            <Route path="/Service" element={<Service/>} />
-            <Route
-              path="/service-anesthesia"
-              element={
-                <ServicePage about={"Анестезия и интенсивная терапия"} />
-              }
-            />
-            <Route
-              path="/service-grooming"
-              element={
-                <ServicePage
-                  about={
-                    "Груминг животных, косметические манипуляции, окрашивание"
-                  }
-                />
-              }
-            />
-            <Route
-              path="/service-dermatology"
-              element={<ServicePage about={"Дерматология"} />}
-            />
-            <Route
-              path="/service-castration"
-              element={<ServicePage about={"Кастрация и стерилизация"} />}
-            />
-            <Route
-              path="/service-laboratory-diagnostics"
-              element={<ServicePage about={"Лабораторная диагностика"} />}
-            />
-            <Route
-              path="/service-surgery"
-              element={<ServicePage about={"Общая хирургия"} />}
-            />
-            <Route
-              path="/service-oncology"
-              element={<ServicePage about={"Онкология"} />}
-            />
-            <Route
-              path="/service-doctor-visit"
-              element={
-                <ServicePage about={"Прием врача и амбулаторные процедуры"} />
-              }
-            />
-            <Route
-              path="/service-reproduction"
-              element={<ServicePage about={"Репродукция"} />}
-            />
-            <Route
-              path="/service-maternity-and-neonatology"
-              element={
-                <ServicePage
-                  about={"Родильное отделение и отделение неонатологии"}
-                />
-              }
-            />
-            <Route
-              path="/service-hospital"
-              element={<ServicePage about={"Стационар"} />}
-            />
-            <Route
-              path="/service-dentistry"
-              element={<ServicePage about={"Стоматология"} />}
-            />
-            <Route
-              path="/service-traumatology-and-orthopedics"
-              element={<ServicePage about={"Травматология и ортопедия"} />}
-            />
-            <Route
-              path="/service-urology-gynecology"
-              element={<ServicePage about={"Урология, гинекология"} />}
-            />
-            <Route
-              path="/service-surgical-procedures"
-              element={<ServicePage about={"Хирургические процедуры"} />}
-            />
-            <Route
-              path="/service-euthanasia-and-funeral"
-              element={<ServicePage about={"Эутаназия и ритуальные услуги"} />}
-            />
-            {/* <Route
-              path="/ServicePage"
-              element={
-                <ServicePage about={"Прием врача и амбулаторные процедуры"} />
-              }
-            /> */}
+            <Route path="/Service" element={<Service />} />
+
+            {servicesRoutes.map((service) => (
+              <Route
+                key={service.path}
+                path={service.path}
+                element={<ServicePage about={service.about} />}
+              />
+            ))}
 
             <Route path="/PriceList" element={<PriseList />} />
             <Route path="/specialists" element={<SpecialistsPage />} />
