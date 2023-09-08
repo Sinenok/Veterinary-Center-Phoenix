@@ -9,7 +9,7 @@ function Footer() {
         <ul className="footer__links f-links">
           <li className="f-links__item">
             <Link to="/about" onClick={() => window.scroll(0, 0)}>
-              О нас
+              Наш Центр
             </Link>
           </li>
           <li className="f-links__item">

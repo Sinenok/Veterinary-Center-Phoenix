@@ -74,7 +74,7 @@ const Header = ({
                   to="/about"
                   // onClick={() => window.scroll(0, 0)}
                 >
-                  О нас
+                  Наш Центр
                 </Link>
               </li>
               <li className="list__item">
@@ -186,6 +186,31 @@ const Header = ({
                       <li className="dropdown-list__item">
                         <Link to="/service-euthanasia-and-funeral">
                           Эутаназия и ритуальные услуги
+                        </Link>
+                      </li>
+                      <li className="dropdown-list__item">
+                        <Link to="/service-ultrasonography">
+                          Ультразвуковое исследование
+                        </Link>
+                      </li>
+                      <li className="dropdown-list__item">
+                        <Link to="/service-endoscopy-and-endosurgery">
+                          Эндоскопия и эндохирургия
+                        </Link>
+                      </li>
+                      <li className="dropdown-list__item">
+                        <Link to="/service-spinal-surgery-and-neurology">
+                          Операции на позвоночнике и неврология
+                        </Link>
+                      </li>
+                      <li className="dropdown-list__item">
+                        <Link to="/service-plastic-surgery">
+                          Пластические операции
+                        </Link>
+                      </li>
+                      <li className="dropdown-list__item">
+                        <Link to="/service-operations-on-the-head">
+                          Операции на голове
                         </Link>
                       </li>
                     </ul>

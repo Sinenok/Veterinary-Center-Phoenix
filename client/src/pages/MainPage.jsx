@@ -29,7 +29,7 @@ import vkIcon from "./../img/main-page/vk-icon.svg";
 import devCat1 from "./../img/main-page/device card-services/devCat1.png";
 import devCat2 from "./../img/main-page/device card-services/devCat2.png";
 import devCat3 from "./../img/main-page/device card-services/devCat3.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MainForm from "../components/MainForm";
 import EnrollComponent from "../components/EnrollComponent";
 import Specialists from "../components/Specialists";
@@ -98,13 +98,16 @@ const MainPage = () => {
   ];
 
   const shuffledReviews = reviews.sort(() => 0.5 - Math.random());
-
   const randomReviews = shuffledReviews.slice(0, 4);
 
   const navigate = useNavigate();
   const aboutHandleClick = (value) => {
     window.scroll(0, 0);
     navigate(`/${value}`);
+  };
+
+  const toggleBurgerLinks = () => {
+    window.scroll(0, 0);
   };
 
   return (
@@ -143,16 +146,25 @@ const MainPage = () => {
         <div className="card-services__wrapper">
           <div className="card-services__title">Эндоскопия</div>
           <div className="card-services__desctription">
-            Процедура, которая позволяет нам обследовать и визуализировать
-            внутренние органы и полости вашего питомца.
+            Эндоскопия – это область медицины, позволяющая с помощью специальных
+            инструментов осматривать органы и полости животных, а также
+            проводить манипуляции с диагностическими и лечебными целями.
           </div>
           <div className="card-services__more more">
-            <a className="more__text-link" href="">
+            <Link
+              onClick={toggleBurgerLinks}
+              to="/service-endoscopy-and-endosurgery"
+              className="more__text-link"
+            >
               ПОДРОБНЕЕ
-            </a>
-            <a className="more__img-link" href="">
+            </Link>
+            <Link
+              onClick={toggleBurgerLinks}
+              to="/service-endoscopy-and-endosurgery"
+              className="more__img-link"
+            >
               <img src={moreIcon} alt="" />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="card-services__img-wrap">
@@ -161,55 +173,76 @@ const MainPage = () => {
         <div className="card-services__wrapper">
           <div className="card-services__title">Ортопедия</div>
           <div className="card-services__desctription">
-            Мы предлагаем широкий спектр услуг ортопедии,
-            <br />
-            включая диагностику, консервативное лечение, хирургические
-            вмешательства и<br />
-            послеоперационную реабилитацию.
+            Ортопедия – раздел ветеринарной медицины, изучающий профилактику,
+            диагностику и лечение деформаций и нарушений костно-мышечной
+            системы, которые являются результатом последствий травм, врожденных
+            дефектов и заболеваний.
           </div>
           <div className="card-services__more more">
-            <a className="more__text-link" href="">
+            <Link
+              to="/service-traumatology-and-orthopedics"
+              onClick={toggleBurgerLinks}
+              className="more__text-link"
+            >
               ПОДРОБНЕЕ
-            </a>
-            <a className="more__img-link" href="">
+            </Link>
+            <Link
+              to="/service-traumatology-and-orthopedics"
+              onClick={toggleBurgerLinks}
+              className="more__img-link"
+            >
               <img src={moreIcon} alt="" />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="card-services__wrapper">
           <div className="card-services__title">УЗИ</div>
           <div className="card-services__desctription">
-            Позволяет получить информацию о состоянии
-            <br />
-            органов, определить наличие патологий, оценить структуру тканей,
-            обнаружить опухоли или аномалии.
+            Ультразвуковая диагностика животных является одним из самых
+            эффективных визуальных методов обследования внутренних органов и
+            тканей животного с помощью ультразвуковых волн высокой частоты.
           </div>
           <div className="card-services__more more">
-            <a className="more__text-link" href="">
+            <Link
+              to="/service-ultrasonography"
+              onClick={toggleBurgerLinks}
+              className="more__text-link"
+            >
               ПОДРОБНЕЕ
-            </a>
-            <a className="more__img-link" href="">
+            </Link>
+            <Link
+              to="/service-ultrasonography"
+              onClick={toggleBurgerLinks}
+              className="more__img-link"
+            >
               <img src={moreIcon} alt="" />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="card-services__wrapper">
           <div className="card-services__title">Репродукция</div>
           <div className="card-services__desctription">
-            Оценка репродуктивной способности,
-            <br />
-            планирование паров, искусственное осеменение, ультразвуковое
-            исследование беременности,
-            <br />
-            помощь при окоте, диагностику и многое другое.
+            Ветеринарный Центр «Феникс» специализируется на репродуктологии и
+            неонатологии много лет! За время существования нашего Центра
+            специалисты нашего Центра вылечили множество заболеваний в сфере
+            репродукции и помогли обрести счастье материнства большому
+            количеству животных!
           </div>
           <div className="card-services__more more">
-            <a className="more__text-link" href="">
+            <Link
+              to="/service-reproduction"
+              onClick={toggleBurgerLinks}
+              className="more__text-link"
+            >
               ПОДРОБНЕЕ
-            </a>
-            <a className="more__img-link" href="">
+            </Link>
+            <Link
+              to="/service-reproduction"
+              onClick={toggleBurgerLinks}
+              className="more__img-link"
+            >
               <img src={moreIcon} alt="" />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="card-services__img-wrap">
@@ -218,19 +251,26 @@ const MainPage = () => {
         <div className="card-services__wrapper">
           <div className="card-services__title">Неонатология</div>
           <div className="card-services__desctription">
-            Наши ветеринарные специалисты имеют глубокие
-            <br />
-            знания и опыт в области раннего развития и здоровья маленьких
-            животных, и они работают в тесном сотрудничестве с владельцами,
-            чтобы обеспечить оптимальные условия и уход для малышей.
+            Специалисты нашего Центра одними из первых в России начали
+            заниматься проблемами новорожденных собак и кошек. К настоящему
+            времени накоплена большая база теоретических и практических знаний в
+            области неонатологии животных.
           </div>
           <div className="card-services__more more">
-            <a className="more__text-link" href="">
+            <Link
+              to="/service-maternity-and-neonatology"
+              onClick={toggleBurgerLinks}
+              className="more__text-link"
+            >
               ПОДРОБНЕЕ
-            </a>
-            <a className="more__img-link" href="">
+            </Link>
+            <Link
+              to="/service-maternity-and-neonatology"
+              onClick={toggleBurgerLinks}
+              className="more__img-link"
+            >
               <img src={moreIcon} alt="" />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="card-services__img-wrap">
@@ -239,19 +279,25 @@ const MainPage = () => {
         <div className="card-services__wrapper">
           <div className="card-services__title">Терапия</div>
           <div className="card-services__desctription">
-            Мы используем современные медицинские
-            <br />
-            протоколы и техники, чтобы обеспечить
-            <br />
-            эффективное и безопасное лечение.
+            В своей практике мы используем принципы доказательной медицины! Мы
+            не лечим гомеопатией и не назначаем «фуфломицины», которые ничего,
+            кроме финансовых потерь владельца, не несут.
           </div>
           <div className="card-services__more more">
-            <a className="more__text-link" href="">
+            <Link
+              to="/service-anesthesia"
+              onClick={toggleBurgerLinks}
+              className="more__text-link"
+            >
               ПОДРОБНЕЕ
-            </a>
-            <a className="more__img-link" href="">
+            </Link>
+            <Link
+              to="/service-anesthesia"
+              onClick={toggleBurgerLinks}
+              className="more__img-link"
+            >
               <img src={moreIcon} alt="" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

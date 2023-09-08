@@ -66,6 +66,27 @@ function App() {
       path: "/service-euthanasia-and-funeral",
       about: "Эутаназия и ритуальные услуги",
     },
+    // ----------------------------------------------------------------------------------------------------------
+    {
+      path: "/service-ultrasonography",
+      about: "Ультразвуковое исследование",
+    },
+    {
+      path: "/service-endoscopy-and-endosurgery",
+      about: "Эндоскопия и эндохирургия",
+    },
+    {
+      path: "/service-spinal-surgery-and-neurology",
+      about: "Операции на позвоночнике и неврология",
+    },
+    {
+      path: "/service-plastic-surgery",
+      about: "Пластические операции",
+    },
+    {
+      path: "/service-operations-on-the-head",
+      about: "Операции на голове",
+    },
   ];
   const [isRotated, setIsRotated] = useState(false);
   function handleClick(e) {

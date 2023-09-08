@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./../styles/main.css";
 // import specialistOrlova from "./../img/main-page/specialists/Orlova.png";
 import specialistOrlova from "./../img/main-page/specialists/Orlova.png";
@@ -10,40 +10,52 @@ import iconPaw from "./../img/main-page/specialists/paw.svg";
 import { useNavigate } from "react-router-dom";
 
 const Specialists = () => {
-  const specialistsList = [
-    {
-      id: 1,
-      name: "Орлова Мария Николаевна",
-      photo: specialistOrlova,
-      description:
-        "Главный ветеринарный врач Центра, репродуктолог- неонатолог, специалист ультразвуковой диагностики",
-    },
-    {
-      id: 2,
-      name: "Магер Алиса",
-      photo: specialistMager,
-      description: "Анестезиолог",
-    },
-    {
-      id: 3,
-      name: "Орлов Павел Георгиевич",
-      photo: specialistOrlov,
-      description:
-        "Ветеринарный врач-кардиолог, хирург, ортопед, специалист ультразвуковой диагностики, генеральный директор",
-    },
-    {
-      id: 4,
-      name: "Михайлова Светлана",
-      photo: specialistMikhailova,
-      description: "Грумер",
-    },
-    {
-      id: 5,
-      name: "Хуснутдинова Диана Маратовна",
-      photo: specialistKhusnutdinova,
-      description: "Ветеринарный врач-терапевт, неонатолог",
-    },
-  ];
+  const [specialists, setSpecialists] = useState(null);
+
+  useEffect(() => {
+    fetch("https://steamget.ru/specialists")
+      .then((response) => response.json())
+      .then((jsonData) => {
+        console.log(jsonData);
+        setSpecialists(jsonData);
+      })
+      .catch((error) => console.error("Ошибка при запросе:", error));
+  }, []);
+
+  // const specialistsList = [
+  //   {
+  //     id: 1,
+  //     name: "Орлова Мария Николаевна",
+  //     photo: specialistOrlova,
+  //     description:
+  //       "Главный ветеринарный врач Центра, репродуктолог- неонатолог, специалист ультразвуковой диагностики",
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Магер Алиса",
+  //     photo: specialistMager,
+  //     description: "Анестезиолог",
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Орлов Павел Георгиевич",
+  //     photo: specialistOrlov,
+  //     description:
+  //       "Ветеринарный врач-кардиолог, хирург, ортопед, специалист ультразвуковой диагностики, генеральный директор",
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Михайлова Светлана",
+  //     photo: specialistMikhailova,
+  //     description: "Грумер",
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Хуснутдинова Диана Маратовна",
+  //     photo: specialistKhusnutdinova,
+  //     description: "Ветеринарный врач-терапевт, неонатолог",
+  //   },
+  // ];
 
   const navigate = useNavigate();
   const aboutHandleClick = (value) => {
@@ -69,21 +81,30 @@ const Specialists = () => {
             </div>
           </div>
           <div className="specialists-cards">
-            {specialistsList.map((specialist) => (
-              <div key={specialist.id} className="specialists-cards__wrapper">
-                <div className="specialists-cards__photo photo">
-                  <img className="photo-img" alt="" src={specialist.photo} />
-                </div>
-                <div className="specialists-cards__info">
-                  <div className="specialists-cards__title">
-                    {specialist.name}
+            {specialists === null
+              ? null
+              : specialists.map((specialist) => (
+                  <div
+                    key={specialist.id}
+                    className="specialists-cards__wrapper"
+                  >
+                    <div className="specialists-cards__photo photo">
+                      <img
+                        className="photo-img"
+                        alt=""
+                        src={specialist.photo}
+                      />
+                    </div>
+                    <div className="specialists-cards__info">
+                      <div className="specialists-cards__title">
+                        {specialist.name}
+                      </div>
+                      <div className="specialists-cards__desctription">
+                        {specialist.description}
+                      </div>
+                    </div>
                   </div>
-                  <div className="specialists-cards__desctription">
-                    {specialist.description}
-                  </div>
-                </div>
-              </div>
-            ))}
+                ))}
           </div>
         </div>
         <div className="in-safe-hands__all-specialists-btn">

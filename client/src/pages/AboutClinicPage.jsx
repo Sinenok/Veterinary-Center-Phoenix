@@ -9,9 +9,15 @@ import photo22 from "./../img/about page/about 22.png";
 import photo23 from "./../img/about page/about 23.png";
 import photo31 from "./../img/about page/about 31.png";
 import EnrollComponent from "../components/EnrollComponent";
+import { useNavigate } from "react-router-dom";
 
 const AboutClinicPage = () => {
-  const about = "О нас";
+  const about = "Наш Центр";
+  const navigate = useNavigate();
+  const aboutHandleClick = (value) => {
+    window.scroll(0, 0);
+    navigate(`/${value}`);
+  };
   return (
     <div className="AboutClinicPage">
       <div className="AboutClinicPage-wrapper">
@@ -30,7 +36,7 @@ const AboutClinicPage = () => {
               лечебно-диагностический
               <br className="about-br" />
               <span className="title-span"> центр здоровья</span> и репродукции
-              животных.
+              животных
             </div>
             <div className="multidisciplinary about-body__content">
               <div className="multidisciplinary__item">
@@ -174,7 +180,10 @@ const AboutClinicPage = () => {
               </div>
               <div className="row-second felt-row">
                 <div className="felt-button felt__item">
-                  <button className="felt-grooming-btn">
+                  <button
+                    onClick={() => aboutHandleClick("service-grooming")}
+                    className="felt-grooming-btn"
+                  >
                     перейти на страницу Груминг
                   </button>
                 </div>
