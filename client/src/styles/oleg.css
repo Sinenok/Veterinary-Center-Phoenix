@@ -457,13 +457,13 @@
 .CenterBlock > p:first-child {
   margin-top: 0;
 }
-.CenterBlock > ul{
-    padding-left: 15px;
-    padding-top: 10px;
-    font-family: "Open Sans";
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+.CenterBlock > ul {
+  padding-left: 15px;
+  padding-top: 10px;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 }
 .CenterFill {
   background-color: #f07e00;
@@ -544,14 +544,14 @@
     font-size: 11px;
     line-height: 18px;
   }
-  .CenterBlock > ul{
+  .CenterBlock > ul {
     padding-left: 11px;
     padding-top: 7px;
     font-family: "Open Sans";
     font-weight: 400;
     font-size: 11px;
     line-height: 18px;
-}
+  }
   .CenterFill > p {
     font-weight: 400;
     font-size: 14px;
@@ -622,4 +622,9 @@ ________________________________________________________________________________
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+.aboutBold {
+  font-size: 20px !important;
+  font-weight: 600 !important;
 }
