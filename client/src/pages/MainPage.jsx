@@ -484,7 +484,7 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-      <Specialists />
+      <Specialists counted={4} />
       <div className="your-trust">
         <div className="your-trust__wrapper">
           <div className="your-trust__main-title main-title">
