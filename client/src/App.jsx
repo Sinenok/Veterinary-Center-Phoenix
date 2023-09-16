@@ -3,16 +3,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./styles/main.css";
 import Header from "./components/Header";
 import MainPage from "./pages/MainPage";
-import BodyMainPage from "./components/BodyMainPage";
 import Footer from "./components/Footer";
 import AboutClinicPage from "./pages/AboutClinicPage";
 import ServicePage from "./components/ServicePage";
 import PriseList from "./components/PriseList";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import ContactPage from "./components/ContactPage";
-
 import Service from "./components/Service";
-
 import SpecialistsPage from "./pages/SpecialistsPage";
 
 function App() {

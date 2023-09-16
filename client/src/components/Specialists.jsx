@@ -9,19 +9,19 @@ import specialistKhusnutdinova from "./../img/main-page/specialists/Khusnutdinov
 import iconPaw from "./../img/main-page/specialists/paw.svg";
 import { useNavigate } from "react-router-dom";
 
-const Specialists = () => {
+const Specialists = ({ counted }) => {
   const [specialists, setSpecialists] = useState(null);
 
   useEffect(() => {
-    fetch("https://steamget.ru/specialists")
+    fetch("https://new.vetfenix.ru/api/specialists")
       .then((response) => response.json())
       .then((jsonData) => {
-        console.log(jsonData);
+        // console.log(jsonData);
         setSpecialists(jsonData);
       })
       .catch((error) => console.error("Ошибка при запросе:", error));
   }, []);
-
+  // console.log(counted);
   // const specialistsList = [
   //   {
   //     id: 1,
@@ -83,7 +83,7 @@ const Specialists = () => {
           <div className="specialists-cards">
             {specialists === null
               ? null
-              : specialists.map((specialist) => (
+              : specialists.slice(0, counted).map((specialist) => (
                   <div
                     key={specialist.id}
                     className="specialists-cards__wrapper"

@@ -1717,9 +1717,9 @@ body {
   border: 1px solid #f17f01;
   background: #fff;
 }
-.button__yandexreviews:hover .reviews-btns__icon{
-    transform: rotate(10deg);
-  }
+.button__yandexreviews:hover .reviews-btns__icon {
+  transform: rotate(10deg);
+}
 .reviews-btns__yandexreviews {
   align-self: center;
   text-align: center;
@@ -2102,6 +2102,7 @@ body {
   }
 }
 .main-form-img {
+  max-width: 350px;
 }
 .record__title {
   color: #fff;

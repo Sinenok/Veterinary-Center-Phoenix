@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import formCat from "./../img/main-page/formCat.png";
+import formCat from "./../img/main-page/formCatNew.png";
 import "./../styles/main.css";
 import FormSubmit from "./FormSubmit";
 
@@ -47,7 +47,7 @@ const MainForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("https://steamget.ru/api/formback/", {
+      const response = await fetch("https://new.vetfenix.ru/api/formback/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
