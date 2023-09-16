@@ -22,9 +22,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.index, name="home"),
-    re_path(r"price_list",views.price_list),
+    re_path(r"api/price_list",views.price_list),
     re_path(r"api/formback/", views.form_back_view, name='formback'),
-    re_path(r"specialists", views.specialists ),
+    re_path(r"api/specialists", views.specialists ),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

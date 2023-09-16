@@ -32,9 +32,10 @@ def form_back_view(request):
     if request.method == 'POST':
         record_name = request.data.get('recordName', '')
         record_phone = request.data.get('recordPhone', '')
+        record_com = request.data.get('recordComent', '')
 
         bot = telebot.TeleBot(token)
-        message = f'Получены новые данные:\nИмя: {record_name}\nТелефон: {record_phone}'
+        message = f'Получены новые данные:\nИмя: {record_name}\nТелефон: {record_phone}\n коментарий: {record_com}'
 
         bot.send_message("-1001931378235", message)
 
