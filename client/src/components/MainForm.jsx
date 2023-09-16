@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import formCat from "./../img/main-page/formCat.png";
+import formCat from "./../img/main-page/formCatNew.png";
 import "./../styles/main.css";
 import FormSubmit from "./FormSubmit";
 
