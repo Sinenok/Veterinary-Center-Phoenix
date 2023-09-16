@@ -9,11 +9,11 @@ import specialistKhusnutdinova from "./../img/main-page/specialists/Khusnutdinov
 import iconPaw from "./../img/main-page/specialists/paw.svg";
 import { useNavigate } from "react-router-dom";
 
-const Specialists = ({counted}) => {
+const Specialists = ({ counted }) => {
   const [specialists, setSpecialists] = useState(null);
 
   useEffect(() => {
-    fetch("https://steamget.ru/specialists")
+    fetch("https://new.vetfenix.ru/api/specialists")
       .then((response) => response.json())
       .then((jsonData) => {
         // console.log(jsonData);

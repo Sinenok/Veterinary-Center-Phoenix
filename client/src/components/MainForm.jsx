@@ -47,7 +47,7 @@ const MainForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch("https://steamget.ru/api/formback/", {
+      const response = await fetch("https://new.vetfenix.ru/api/formback/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

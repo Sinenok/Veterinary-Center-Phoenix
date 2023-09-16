@@ -1,6 +1,6 @@
 import React from "react";
 import "./../styles/main.css";
-import mainBanner from "./../img/main-page/banner-headr.png";
+import mainBanner from "./../img/main-page/banner-headrOld.png";
 import moreIcon from "./../img/main-page/more.svg";
 import aboutUsCircle from "./../img/main-page/Ellipse.png";
 import specialistOrlova from "./../img/main-page/specialists/Orlova.png";
@@ -26,7 +26,7 @@ import mainMap from "./../img/main-page/map-contact.png";
 import birdLogo from "./../img/main-page/birdLogo.svg";
 import textLogo from "./../img/main-page/text-logo.svg";
 import vkIcon from "./../img/main-page/vk-icon.svg";
-import devCat1 from "./../img/main-page/device card-services/devCat1.png";
+import devCat1 from "./../img/main-page/device card-services/devCat1.jpg";
 import devCat2 from "./../img/main-page/device card-services/devCat2.png";
 import devCat3 from "./../img/main-page/device card-services/devCat3.png";
 import { Link, useNavigate } from "react-router-dom";
@@ -333,20 +333,31 @@ const MainPage = () => {
               <div className="advantages-pharmacy advantages">
                 <div className="advantages-title">Аптека и зоомагазин</div>
                 <div className="advantages-text">
-                В нашей аптеке предоставлен широкий выбор качественных и безопасных медикаментов, кормов ведущих производителей, диетического питания, витаминов и других средств, необходимых для лечения и поддержания здоровья вашего питомца. 
+                  В нашей аптеке предоставлен широкий выбор качественных и
+                  безопасных медикаментов, кормов ведущих производителей,
+                  диетического питания, витаминов и других средств, необходимых
+                  для лечения и поддержания здоровья вашего питомца.
                 </div>
               </div>
               <div className="grooming-and-clinic-container">
                 <div className="advantages-grooming advantages">
                   <div className="advantages-title">ГРУМИНГ</div>
                   <div className="advantages-text">
-                  Наш грумер имеет большой опыт работы со всеми породами собак и обладают глубокими знаниями о требованиях каждой породы в отношении ухода за шерстью. Бережное и трепетное отношение к каждому пациенту – наше кредо!
+                    Наш грумер имеет большой опыт работы со всеми породами собак
+                    и обладают глубокими знаниями о требованиях каждой породы в
+                    отношении ухода за шерстью. Бережное и трепетное отношение к
+                    каждому пациенту – наше кредо!
                   </div>
                 </div>
                 <div className="advantages-clinic advantages">
                   <div className="advantages-title">Клиника</div>
                   <div className="advantages-text">
-                  В нашем Центре при лечении питомцев мы придерживаемся принципов доказательной медицины. Это значит, что все препараты, схемы лечения и алгоритмы диагностики полностью доказаны как обоснованные и обязательные к применению. Мы не занимаемся назначением «фуфломицинов», не лечим гомеопатией и пиявками. 
+                    В нашем Центре при лечении питомцев мы придерживаемся
+                    принципов доказательной медицины. Это значит, что все
+                    препараты, схемы лечения и алгоритмы диагностики полностью
+                    доказаны как обоснованные и обязательные к применению. Мы не
+                    занимаемся назначением «фуфломицинов», не лечим гомеопатией
+                    и пиявками.
                   </div>
                 </div>
               </div>
@@ -357,19 +368,30 @@ const MainPage = () => {
                   Аптека и зоомагазин
                 </div>
                 <div className="advantages-text-device">
-                В нашей аптеке предоставлен широкий выбор качественных и безопасных медикаментов, кормов ведущих производителей, диетического питания, витаминов и других средств, необходимых для лечения и поддержания здоровья вашего питомца. 
+                  В нашей аптеке предоставлен широкий выбор качественных и
+                  безопасных медикаментов, кормов ведущих производителей,
+                  диетического питания, витаминов и других средств, необходимых
+                  для лечения и поддержания здоровья вашего питомца.
                 </div>
               </div>
               <div className="advantages-device">
                 <div className="advantages-title-device">ГРУМИНГ</div>
                 <div className="advantages-text-device">
-                Наш грумер имеет большой опыт работы со всеми породами собак и обладают глубокими знаниями о требованиях каждой породы в отношении ухода за шерстью. Бережное и трепетное отношение к каждому пациенту – наше кредо!
+                  Наш грумер имеет большой опыт работы со всеми породами собак и
+                  обладают глубокими знаниями о требованиях каждой породы в
+                  отношении ухода за шерстью. Бережное и трепетное отношение к
+                  каждому пациенту – наше кредо!
                 </div>
               </div>
               <div className="advantages-device">
                 <div className="advantages-title-device">Клиника</div>
                 <div className="advantages-text-device">
-                  В нашем Центре при лечении питомцев мы придерживаемся принципов доказательной медицины. Это значит, что все препараты, схемы лечения и алгоритмы диагностики полностью доказаны как обоснованные и обязательные к применению. Мы не занимаемся назначением «фуфломицинов», не лечим гомеопатией и пиявками. 
+                  В нашем Центре при лечении питомцев мы придерживаемся
+                  принципов доказательной медицины. Это значит, что все
+                  препараты, схемы лечения и алгоритмы диагностики полностью
+                  доказаны как обоснованные и обязательные к применению. Мы не
+                  занимаемся назначением «фуфломицинов», не лечим гомеопатией и
+                  пиявками.
                 </div>
               </div>
             </div>
@@ -399,29 +421,56 @@ const MainPage = () => {
                 Широкий спектр услуг
               </div>
               <div className="advantages-cards__desctription">
-              Мы очень любим и ценим наших клиентов и пациентов, поэтому рады предложить широкий спектр услуг для того, чтобы Ваши питомцы оставались веселыми и жизнерадостными: к Вашим услугам специалисты разных специализаций: от терапевта до ортопеда, от хирурга до дерматолога. Неонатология, кардиология, эндокринология и многие другие направления ветеринарной медицины представлены в нашем Центре! А еще у нас есть комфортабельный стационар!
+                Мы очень любим и ценим наших клиентов и пациентов, поэтому рады
+                предложить широкий спектр услуг для того, чтобы Ваши питомцы
+                оставались веселыми и жизнерадостными: к Вашим услугам
+                специалисты разных специализаций: от терапевта до ортопеда, от
+                хирурга до дерматолога. Неонатология, кардиология,
+                эндокринология и многие другие направления ветеринарной медицины
+                представлены в нашем Центре! А еще у нас есть комфортабельный
+                стационар!
               </div>
               <div className="advantages-cards__more more">
-                <a className="more__text-link" href="">
+                <Link
+                  onClick={toggleBurgerLinks}
+                  to="/Service"
+                  className="more__text-link"
+                >
                   ПОДРОБНЕЕ
-                </a>
-                <a className="more__img-link" href="">
+                </Link>
+                <Link
+                  onClick={toggleBurgerLinks}
+                  to="/Service"
+                  className="more__img-link"
+                >
                   <img src={moreIcon} alt="" />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="advantages-cards__wrapper">
               <div className="advantages-cards__title">Опытные врачи</div>
               <div className="advantages-cards__desctription">
-              Наши опытные специалисты принимают участие во всероссийских и зарубежных конференциях, вэбинарах и мастер-классах в качестве слушателей и, иногда, лекторов. Для того, чтобы правильно и современно лечить Ваших питомцев, мы постоянно находимся в процессе непрерывного обучения. 
+                Наши опытные специалисты принимают участие во всероссийских и
+                зарубежных конференциях, вэбинарах и мастер-классах в качестве
+                слушателей и, иногда, лекторов. Для того, чтобы правильно и
+                современно лечить Ваших питомцев, мы постоянно находимся в
+                процессе непрерывного обучения.
               </div>
               <div className="advantages-cards__more more">
-                <a className="more__text-link" href="">
+                <Link
+                  onClick={toggleBurgerLinks}
+                  to="/specialists"
+                  className="more__text-link"
+                >
                   ПОДРОБНЕЕ
-                </a>
-                <a className="more__img-link" href="">
+                </Link>
+                <Link
+                  onClick={toggleBurgerLinks}
+                  to="/specialists"
+                  className="more__img-link"
+                >
                   <img src={moreIcon} alt="" />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="advantages-cards__wrapper">
@@ -468,7 +517,15 @@ const MainPage = () => {
         <div className="your-trust__wrapper">
           <div className="your-trust__main-title main-title">
             <div className="your-trust__button buttons-category">
-              <button className="buttons-category__reviews">Отзывы</button>
+              <button
+                onClick={() =>
+                  (window.location.href =
+                    "https://yandex.ru/maps/org/feniks/83872204934/reviews/?ll=30.459946%2C59.868911&z=18")
+                }
+                className="buttons-category__reviews"
+              >
+                Отзывы
+              </button>
             </div>
             <div className="your-trust__title body-titles">
               Ваше <span className="title-span">доверие</span> -<br />
