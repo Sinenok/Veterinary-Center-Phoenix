@@ -9,7 +9,7 @@ import specialistKhusnutdinova from "./../img/main-page/specialists/Khusnutdinov
 import iconPaw from "./../img/main-page/specialists/paw.svg";
 import { useNavigate } from "react-router-dom";
 
-const Specialists = ({ counted }) => {
+const Specialists = ({ setTakeSpecialists, counted }) => {
   const [specialists, setSpecialists] = useState(null);
 
   useEffect(() => {
@@ -18,8 +18,12 @@ const Specialists = ({ counted }) => {
       .then((jsonData) => {
         // console.log(jsonData);
         setSpecialists(jsonData);
+        setTakeSpecialists && setTakeSpecialists(true);
       })
-      .catch((error) => console.error("Ошибка при запросе:", error));
+      .catch((error) => {
+        console.error("Ошибка при запросе:", error);
+        setTakeSpecialists && setTakeSpecialists(true);
+      });
   }, []);
   // console.log(counted);
   // const specialistsList = [

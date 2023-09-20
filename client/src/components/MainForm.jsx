@@ -87,7 +87,7 @@ const MainForm = () => {
       {isSubmitted ? (
         <FormSubmit />
       ) : (
-        <form className="main-form" onSubmit={handleSubmit}>
+        <form id="record-form" className="main-form" onSubmit={handleSubmit}>
           <div className="record__form">
             <div className="main-form__cat">
               <img className="main-form-img" alt="" src={formCat} />

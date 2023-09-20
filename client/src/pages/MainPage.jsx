@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./../styles/main.css";
 import mainBanner from "./../img/main-page/banner-headrOld.png";
+import mainBannerLow from "./../img/main-page/banner-headr.jpg";
+// import mainBannerLow from "./../img/main-page/cam1.jpg";
 import moreIcon from "./../img/main-page/more.svg";
 import aboutUsCircle from "./../img/main-page/Ellipse.png";
 import specialistOrlova from "./../img/main-page/specialists/Orlova.png";
@@ -27,8 +29,8 @@ import birdLogo from "./../img/main-page/birdLogo.svg";
 import textLogo from "./../img/main-page/text-logo.svg";
 import vkIcon from "./../img/main-page/vk-icon.svg";
 import devCat1 from "./../img/main-page/device card-services/devCat1.jpg";
-import devCat2 from "./../img/main-page/device card-services/devCat2.png";
-import devCat3 from "./../img/main-page/device card-services/devCat3.png";
+import devCat2 from "./../img/main-page/device card-services/devCat2.jpg";
+import devCat3 from "./../img/main-page/device card-services/devCat3.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import MainForm from "../components/MainForm";
 import EnrollComponent from "../components/EnrollComponent";
@@ -37,7 +39,21 @@ import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 import mapIcon from "./../img/main-page/mapIcon.png";
 import MapClinic from "../components/MapClinic";
 
-const MainPage = () => {
+const MainPage = ({ buttonClick, setButtonClick }) => {
+  // console.log(buttonClick);
+  const [takeSpecialists, setTakeSpecialists] = useState(false);
+  // console.log("dsadsdsadsadasdsada0", takeSpecialists);
+  const myRef = useRef(null);
+  useEffect(() => {
+    if (buttonClick) {
+      const element = myRef.current;
+      if (takeSpecialists) {
+        element.scrollIntoView({ behavior: "smooth" });
+        setButtonClick(false);
+        setTakeSpecialists(false);
+      }
+    }
+  }, [buttonClick, takeSpecialists]);
   const reviews = [
     {
       id: 1,
@@ -110,10 +126,22 @@ const MainPage = () => {
     window.scroll(0, 0);
   };
 
+  const [imgLoaded, setImgLoaded] = useState(false);
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => setImgLoaded(true);
+    img.src = mainBanner;
+  }, [mainBanner]);
+
   return (
     <div className="main-page-body">
       <div className="main__banner">
-        <img className="main__banner-img" alt="" src={mainBanner} />
+        {imgLoaded ? (
+          <img className="main__banner-img" alt="" src={mainBanner} />
+        ) : (
+          <img className="main__banner-img" alt="" src={mainBannerLow} />
+        )}
+        {/* <img className="main__banner-img" alt="" src={mainBanner} /> */}
       </div>
       <div className="header__title">
         <p className="title-text">
@@ -512,7 +540,7 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-      <Specialists counted={4} />
+      <Specialists setTakeSpecialists={setTakeSpecialists} counted={4} />
       <div className="your-trust">
         <div className="your-trust__wrapper">
           <div className="your-trust__main-title main-title">
@@ -798,7 +826,9 @@ const MainPage = () => {
           </div>
         </div>
       </div>
-      <EnrollComponent />
+      <div ref={myRef}>
+        <EnrollComponent />
+      </div>
       <div className="map-contacts">
         <div className="map-contacts__wrapper">
           <div className="map-contacts__main-title main-title">

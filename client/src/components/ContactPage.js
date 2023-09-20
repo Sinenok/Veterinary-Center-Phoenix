@@ -119,7 +119,11 @@ function ContactPage() {
           {isSubmitted ? (
             <FormSubmit />
           ) : (
-            <form className="main-form" onSubmit={handleSubmit}>
+            <form
+              id="record-form"
+              className="main-form"
+              onSubmit={handleSubmit}
+            >
               <div className="record__form">
                 <div className="record__title">У вас есть вопросы?</div>
                 <div className="record__subtitle">
