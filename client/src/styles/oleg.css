@@ -599,8 +599,12 @@ ________________________________________________________________________________
     object-fit: cover; */
   border-radius: 17px;
 }
+.block_service .photo2{
+    min-width: 100%;
+}
 .blockdisplay {
   display: block;
+  border: none;
 }
 @media (max-width: 850px) {
   .block_service {

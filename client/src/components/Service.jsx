@@ -3,6 +3,7 @@ import "./../styles/oleg.css";
 import HeaderBanner from "./HeaderBanner";
 import EnrollComponent from "./EnrollComponent";
 import cat from "./../img/service/Rectangle55.png";
+import dog from "./../img/service/027af143-ede5-4e8e-8bf8-189f1490eac5.jpg"
 import moreIcon from "./../img/main-page/more.svg";
 import { Link } from "react-router-dom";
 

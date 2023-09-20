@@ -22,7 +22,7 @@ def handle_photo_command(message):
 
 @bot.message_handler(content_types=['photo'])
 def handle_photo(message):
-
+    user_id = message.from_user.id
     if message.from_user.id not in [admin_user_id1]:
         bot.send_message(message.chat.id, "У вас нет прав на выполнение этой команды.")
         return
@@ -35,14 +35,14 @@ def handle_photo(message):
 
     file_url = f'https://api.telegram.org/file/bot{token}/{file_path}'
 
-    save_path = os.path.join(settings.MEDIA_ROOT, f'file{message_id}.jpg')
+    save_path = os.path.join(settings.MEDIA_ROOT, f'file_{user_id}_{message_id}.jpg')
 
     response = requests.get(file_url)
     if response.status_code == 200:
         with open(save_path, 'wb') as file:
             file.write(response.content)
 
-        photo_url = os.path.join(settings.MEDIA_URL, f'file{message_id}.jpg')
+        photo_url = os.path.join(settings.MEDIA_URL, f'file_{user_id}_{message_id}.jpg')
 
         request = HttpRequest()
         request.META['HTTP_HOST'] = '127.0.0.1:8000'
