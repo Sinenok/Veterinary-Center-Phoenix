@@ -769,8 +769,11 @@ body {
   }
 }
 @media (max-width: 450px) {
+  .card-services__img-wrap {
+    max-width: 47.5%;
+  }
   .card-services__title {
-    padding: 15px 10px 5px 10px;
+    padding: 10px 10px 5px 10px;
     font-size: 12px;
     /* font-size: 3.3vw; */
   }
@@ -783,32 +786,35 @@ body {
 }
 @media (max-width: 400px) {
   .card-services__img-wrap {
-    max-width: 45%;
+    max-width: 47.5%;
     border-radius: 10px;
     /* border: 2px solid black; */
     margin-bottom: 26px;
   }
   .card-services__title {
-    padding: 10px 10px 3px 10px;
+    padding: 8px 8px 3px 8px;
     font-size: 10px;
     /* font-size: 3.3vw; */
   }
   .card-services__desctription {
-    margin: 0 10px 5px 10px;
+    margin: 0 8px 5px 8px;
     font-size: 10px;
     font-size: 8px;
     /* border: 2px solid orange; */
   }
   .more {
-    padding-bottom: 5px;
-    padding-right: 15px;
+    padding-bottom: 3px;
+    padding-right: 10px;
   }
   .more__text-link {
-    font-size: 10px;
+    font-size: 8px;
+    margin-right: 4px;
   }
   .more__img-link {
-    width: 8px;
-    height: 8px;
+    width: 6.5px;
+    height: 6.5px;
+    vertical-align: text-top;
+    margin-top: 1.5px;
   }
 }
 .in-safe-hands__all-specialists-btn.device-active {

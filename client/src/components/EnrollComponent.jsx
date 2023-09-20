@@ -4,7 +4,7 @@ import MainForm from "./MainForm";
 
 const EnrollComponent = () => {
   return (
-    <div id="record-form" className="record">
+    <div className="record">
       <div className="record__wrapper">
         <div className="record__main-title main-title">
           <div className="record__button buttons-category">

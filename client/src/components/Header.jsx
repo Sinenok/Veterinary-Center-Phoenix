@@ -8,6 +8,7 @@ import closeBurger from "./../img/main-page/closeBurger.svg";
 import { Link, useNavigate } from "react-router-dom";
 
 const Header = ({
+  setButtonClick,
   handleMouseEnter,
   handleMouseLeave,
   handleMouseClick,
@@ -48,12 +49,18 @@ const Header = ({
 
   const navigate = useNavigate();
   const aboutHandleClick = (value) => {
-    navigate(`/${value}`);
+    // navigate(`/${value}`);
     searchBurgerState();
     setTimeout(() => {
-      const element = document.getElementById("record-form");
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+      const privNode = document.querySelector(".ContentPrivacy");
+      if (privNode !== null) {
+        setButtonClick(true);
+        navigate(`/${value}`);
+      } else {
+        const element = document.getElementById("record-form");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
       }
     }, 0);
   };

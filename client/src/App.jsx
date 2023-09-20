@@ -14,9 +14,7 @@ import SpecialistsPage from "./pages/SpecialistsPage";
 
 function App() {
   const servicesRoutes = [
-    { path: "/service-anesthesia", 
-      about: "Анестезия и интенсивная терапия",
-    },
+    { path: "/service-anesthesia", about: "Анестезия и интенсивная терапия" },
     {
       path: "/service-grooming",
       about: "Груминг животных, косметические манипуляции, окрашивание",
@@ -109,18 +107,29 @@ function App() {
     }
   };
   // console.log(isRotated);
+  const [buttonClick, setButtonClick] = useState(false);
+
   return (
     <Router>
       <main className="main" onClick={handleClick}>
         <div className="main__container">
           <Header
+            setButtonClick={setButtonClick}
             handleMouseEnter={handleMouseEnter}
             handleMouseLeave={handleMouseLeave}
             handleMouseClick={handleMouseClick}
             isRotated={isRotated}
           />
           <Routes>
-            <Route path="/" element={<MainPage />} />
+            <Route
+              path="/"
+              element={
+                <MainPage
+                  buttonClick={buttonClick}
+                  setButtonClick={setButtonClick}
+                />
+              }
+            />
             <Route path="/about" element={<AboutClinicPage />} />
             <Route path="/Service" element={<Service />} />
 
