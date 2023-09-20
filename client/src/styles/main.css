@@ -1413,8 +1413,8 @@ body {
   /* flex-basis: 25%; */
 }
 .photo-img {
-  width: 192px;
-  height: 168px;
+  width: 200px;
+  height: 200px;
   border-radius: 18px;
   /* min-width: 192px;
   min-height: 100%; */

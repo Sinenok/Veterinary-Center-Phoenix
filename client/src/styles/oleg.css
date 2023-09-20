@@ -133,6 +133,9 @@
   .expand-icon {
     width: 13px;
   }
+  .expand-icon img{
+    max-width: 13px;
+  }
   .price-table {
     font-size: 14px;
     line-height: 23px;
