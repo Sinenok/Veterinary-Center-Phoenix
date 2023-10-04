@@ -38,6 +38,7 @@ import Specialists from "../components/Specialists";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 import mapIcon from "./../img/main-page/mapIcon.png";
 import MapClinic from "../components/MapClinic";
+import { windowStartScrol } from "../components/Service";
 
 const MainPage = ({ buttonClick, setButtonClick }) => {
   // console.log(buttonClick);
@@ -118,12 +119,13 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
 
   const navigate = useNavigate();
   const aboutHandleClick = (value) => {
-    window.scroll(0, 0);
+    // window.scroll(0, 0);
     navigate(`/${value}`);
+    windowStartScrol();
   };
 
   const toggleBurgerLinks = () => {
-    window.scroll(0, 0);
+    setTimeout(() => window.scroll(0, 0), 100);
   };
 
   const [imgLoaded, setImgLoaded] = useState(false);
@@ -161,7 +163,12 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
       <div className="card-services-device-header device-header">
         <div className="device-header-title">
           <div className="device-header__button">
-            <button className="buttons-device__services-btn">Услуги</button>
+            <button
+              onClick={() => aboutHandleClick("Service")}
+              className="buttons-device__services-btn"
+            >
+              Услуги
+            </button>
           </div>
           <div className="device-header-title__text">
             У нас широкий спектр услуг
@@ -330,7 +337,12 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
         </div>
       </div>
       <div className="in-safe-hands__all-specialists-btn device-active">
-        <button className="all-specialists-btn">Смотреть все услуги</button>
+        <button
+          onClick={() => aboutHandleClick("Service")}
+          className="all-specialists-btn"
+        >
+          Смотреть все услуги
+        </button>
         <img className="all-specialists-icon" alt="" src={iconPaw} />
       </div>
       <div className="love-animal">

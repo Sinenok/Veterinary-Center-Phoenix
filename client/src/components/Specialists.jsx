@@ -8,6 +8,7 @@ import specialistMikhailova from "./../img/main-page/specialists/Mikhailova.png"
 import specialistKhusnutdinova from "./../img/main-page/specialists/Khusnutdinova.png";
 import iconPaw from "./../img/main-page/specialists/paw.svg";
 import { useNavigate } from "react-router-dom";
+import { windowStartScrol } from "./Service";
 
 const Specialists = ({ setTakeSpecialists, counted }) => {
   const [specialists, setSpecialists] = useState(null);
@@ -63,8 +64,9 @@ const Specialists = ({ setTakeSpecialists, counted }) => {
 
   const navigate = useNavigate();
   const aboutHandleClick = (value) => {
-    window.scroll(0, 0);
+    // window.scroll(0, 0);
     navigate(`/${value}`);
+    windowStartScrol()    
   };
   return (
     <>

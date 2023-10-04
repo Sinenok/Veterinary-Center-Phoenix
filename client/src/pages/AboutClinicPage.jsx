@@ -10,13 +10,15 @@ import photo23 from "./../img/about page/about 23.png";
 import photo31 from "./../img/about page/about 31.png";
 import EnrollComponent from "../components/EnrollComponent";
 import { useNavigate } from "react-router-dom";
+import { windowStartScrol } from "../components/Service";
 
 const AboutClinicPage = () => {
   const about = "Наш Центр";
   const navigate = useNavigate();
   const aboutHandleClick = (value) => {
-    window.scroll(0, 0);
+    // window.scroll(0, 0);
     navigate(`/${value}`);
+    windowStartScrol();
   };
   return (
     <div className="AboutClinicPage">

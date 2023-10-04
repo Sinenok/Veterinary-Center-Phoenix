@@ -2466,6 +2466,12 @@ body {
   color: #fff;
   margin-left: 256px;
 }
+@media (max-width: 750px) {
+  .head-banner__title {
+    font-size: 30px;
+    margin-left: 215px;
+  }
+}
 @media (max-width: 600px) {
   .head-banner {
     margin-top: -25px;
@@ -2486,6 +2492,12 @@ body {
   }
   .head-banner__title {
     font-size: 25px;
+    margin-left: 80px;
+  }
+}
+@media (max-width: 400px) {
+  .head-banner__title {
+    font-size: 20px;
     margin-left: 80px;
   }
 }
