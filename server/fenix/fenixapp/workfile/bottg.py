@@ -9,7 +9,7 @@ from fenixapp.workfile.specparse import *
 token = "6021451260:AAFfVwFeCGlLVLRLEU1paq9_DWg1J3JKGxs"
 bot = telebot.TeleBot(token)
 admin_user_id1 = 5150739534
-
+admin_user_id2 = 408007566
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
     bot.reply_to(message, "Команды:\n Для загрузки фото на сервер, просто отправьте фото и получите ссылку \n /ExcelPrise - загрузить прайс \n /ExcelSpecialist - загрузить специалистов.")
@@ -23,7 +23,7 @@ def handle_photo_command(message):
 @bot.message_handler(content_types=['photo'])
 def handle_photo(message):
     user_id = message.from_user.id
-    if message.from_user.id not in [admin_user_id1]:
+    if message.from_user.id not in [admin_user_id1,admin_user_id2]:
         bot.send_message(message.chat.id, "У вас нет прав на выполнение этой команды.")
         return
 
@@ -57,7 +57,7 @@ def handle_photo(message):
 def handle_document(message):
     chat_id = message.chat.id
 
-    if message.from_user.id not in [admin_user_id1]:
+    if message.from_user.id not in [admin_user_id1,admin_user_id2]:
         bot.send_message(chat_id, "У вас нет прав на выполнение этой команды.")
         return
 
