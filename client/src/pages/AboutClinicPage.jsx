@@ -4,10 +4,15 @@ import HeaderBanner from "../components/HeaderBanner";
 import photo11 from "./../img/about page/about 11.png";
 import photo12 from "./../img/about page/about 12.png";
 import photo13 from "./../img/about page/about 13.png";
-import photo21 from "./../img/about page/about 21.png";
-import photo22 from "./../img/about page/about 22.png";
+import photo21 from "./../img/about page/tg/newPhoto3.jpg";
+import photo22 from "./../img/about page/tg/newPhoto4.jpg";
 import photo23 from "./../img/about page/about 23.png";
 import photo31 from "./../img/about page/about 31.png";
+
+import newphoto1 from "./../img/about page/tg/photo_2023-10-07_21-25-13.jpg";
+import newphoto2 from "./../img/about page/tg/photo_2023-10-07_21-25-28.jpg";
+import newphoto3 from "./../img/about page/tg/newPhoto6.jpg";
+
 import EnrollComponent from "../components/EnrollComponent";
 import { useNavigate } from "react-router-dom";
 import { windowStartScrol } from "../components/Service";
@@ -60,7 +65,7 @@ const AboutClinicPage = () => {
           </div>
           <div className="about-body__wraper">
             <div className="about-body__titles">
-            В нашем Центре работает команда
+              В нашем Центре работает команда
               <br className="about-br" />
               <span className="team-space spaces">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -74,25 +79,36 @@ const AboutClinicPage = () => {
             </div>
             <div className="team about-body__content">
               <div className="team-text-debice team__item about-clinic-text">
-              Мы  оказываем помощь нашим пациентам в различных областях, включая репродукцию, неонатологию, дерматологию, ортопедию, травматологию, неврологию и все виды эндоскопической диагностики и лечения. Самое современное оборудование, установленное в нашем Центре позволяет проводить нам точные и надёжные исследования для правильной постановки диагноза. 
-Индивидуальный подход к каждому пациенту, учитывая его уникальные потребности и особенности - отличительная черта нашего Центра!
+                Мы оказываем помощь нашим пациентам в различных областях,
+                включая репродукцию, неонатологию, дерматологию, ортопедию,
+                травматологию, неврологию и все виды эндоскопической диагностики
+                и лечения.
               </div>
               <div className="team__item">
                 <img className="team-img" src={photo21} alt="" />
               </div>
               <div className="team-text team__item about-clinic-text">
                 <p>
-                Мы  оказываем помощь нашим пациентам в различных областях, включая репродукцию, неонатологию, дерматологию, ортопедию, травматологию, неврологию и все виды эндоскопической диагностики и лечения. Самое современное оборудование, установленное в нашем Центре позволяет проводить нам точные и надёжные исследования для правильной постановки диагноза. 
-Индивидуальный подход к каждому пациенту, учитывая его уникальные потребности и особенности - отличительная черта нашего Центра!
+                  Мы оказываем помощь нашим пациентам в различных областях,
+                  включая репродукцию, неонатологию, дерматологию, ортопедию,
+                  травматологию, неврологию и все виды эндоскопической
+                  диагностики и лечения. Самое современное оборудование,
+                  установленное в нашем Центре позволяет проводить нам точные и
+                  надёжные исследования для правильной постановки диагноза.
+                  Индивидуальный подход к каждому пациенту, учитывая его
+                  уникальные потребности и особенности - отличительная черта
+                  нашего Центра!
                 </p>
-                
               </div>
               <div className="team__item">
                 <img className="team-img" src={photo22} alt="" />
               </div>
               <div className="team-text-debice team__item about-clinic-text">
-              Мы  оказываем помощь нашим пациентам в различных областях, включая репродукцию, неонатологию, дерматологию, ортопедию, травматологию, неврологию и все виды эндоскопической диагностики и лечения. Самое современное оборудование, установленное в нашем Центре позволяет проводить нам точные и надёжные исследования для правильной постановки диагноза. 
-Индивидуальный подход к каждому пациенту, учитывая его уникальные потребности и особенности - отличительная черта нашего Центра!
+                Самое современное оборудование, установленное в нашем Центре
+                позволяет проводить нам точные и надёжные исследования для
+                правильной постановки диагноза. Индивидуальный подход к каждому
+                пациенту, учитывая его уникальные потребности и особенности -
+                отличительная черта нашего Центра!
               </div>
               <div className="team__item">
                 <img className="team-img" src={photo23} alt="" />
@@ -123,12 +139,12 @@ const AboutClinicPage = () => {
                   безопасности.
                 </div>
                 <div className="purchase__item">
-                  <img src={photo12} alt="" />
+                  <img src={newphoto1} alt="" />
                 </div>
               </div>
               <div className="purchase-row-two">
                 <div className="purchase__item">
-                  <img src={photo12} alt="" />
+                  <img src={newphoto2} alt="" />
                 </div>
                 <div className="purchase__item about-clinic-text">
                   В магазине Вы можете приобрести корма супер-премиум класса,
@@ -169,7 +185,7 @@ const AboutClinicPage = () => {
                   недостатки и подчеркнуть достоинства Вашего любимца.
                 </div>
                 <div className="felt__item">
-                  <img className="felt-img" src={photo21} alt="" />
+                  <img className="felt-img" src={newphoto3} alt="" />
                   <p className="about-clinic-text">
                     Уход за шерстью Вашего питомца лучше доверить профессионалу.
                     Мы рады предложить Вам широкий спектр услуг: гигиеническая,
