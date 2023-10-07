@@ -373,7 +373,7 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
               <div className="advantages-pharmacy advantages">
                 <div className="advantages-title">Аптека и зоомагазин</div>
                 <div className="advantages-text">
-                  В нашей аптеке предоставлен широкий выбор качественных и
+                  В нашей аптеке представлен широкий выбор качественных и
                   безопасных медикаментов, кормов ведущих производителей,
                   диетического питания, витаминов и других средств, необходимых
                   для лечения и поддержания здоровья вашего питомца.
@@ -408,7 +408,7 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
                   Аптека и зоомагазин
                 </div>
                 <div className="advantages-text-device">
-                  В нашей аптеке предоставлен широкий выбор качественных и
+                  В нашей аптеке представлен широкий выбор качественных и
                   безопасных медикаментов, кормов ведущих производителей,
                   диетического питания, витаминов и других средств, необходимых
                   для лечения и поддержания здоровья вашего питомца.
@@ -522,14 +522,14 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
                 и потребности питомца, чтобы предоставить наиболее эффективное и
                 заботливое лечение.
               </div>
-              <div className="advantages-cards__more more">
+              {/* <div className="advantages-cards__more more">
                 <a className="more__text-link" href="">
                   ПОДРОБНЕЕ
                 </a>
                 <a className="more__img-link" href="">
                   <img src={moreIcon} alt="" />
                 </a>
-              </div>
+              </div> */}
             </div>
             <div className="advantages-cards__wrapper">
               <div className="advantages-cards__title">
@@ -540,14 +540,14 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
                 лечения, что позволяет нам проводить точные и надежные
                 исследования, а также применять передовые методы лечения.
               </div>
-              <div className="advantages-cards__more more">
+              {/* <div className="advantages-cards__more more">
                 <a className="more__text-link" href="">
                   ПОДРОБНЕЕ
                 </a>
                 <a className="more__img-link" href="">
                   <img src={moreIcon} alt="" />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

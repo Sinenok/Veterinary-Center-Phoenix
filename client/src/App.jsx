@@ -20,6 +20,10 @@ function App() {
       about: "Груминг животных, косметические манипуляции, окрашивание",
     },
     {
+    path: "/service-cardio",
+    about: "Кардиология",
+    },
+    {
       path: "/service-dermatology",
       about: "Дерматология",
     },
