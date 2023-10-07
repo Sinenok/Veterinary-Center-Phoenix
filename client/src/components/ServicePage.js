@@ -405,8 +405,8 @@ const ServicePage = ({ about }) => {
       <HeaderBanner headTitle={about} />
       <div className="ServiceBlock">
         <div className="LeftSection">
-          <p className="LeftTitle">Описание раздела</p>
-          <p className="LeftSubTitle">Какая то надпись</p>
+          {/* <p className="LeftTitle">Описание раздела</p>
+          <p className="LeftSubTitle">Какая то надпись</p> */}
         </div>
 
         <div className="CenterSection">
