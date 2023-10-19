@@ -85,7 +85,7 @@ const AboutClinicPage = () => {
                 и лечения.
               </div>
               <div className="team__item">
-                <img className="team-img" src={photo21} alt="" />
+                <img className="team-img fotoright" src={photo21} alt="" />
               </div>
               <div className="team-text team__item about-clinic-text">
                 <p>

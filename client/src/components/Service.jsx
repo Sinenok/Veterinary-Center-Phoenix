@@ -291,7 +291,7 @@ const Service = () => {
         </div>
         <div className="block_service">
           <div class="advantages-cards__title">
-            !!!Вакцинация и чипирование!!!
+            Вакцинация и чипирование
           </div>
           <div class="advantages-cards__desctription">
           Профилактика вирусных заболеваний собак и кошек – обязательная и неотъемлемая часть услуг ветеринарной клиники. У нас Вы можете привить своего питомца импортной поливалентной вакциной, а также сделать чипирование.
@@ -299,14 +299,14 @@ const Service = () => {
           <div class="advantages-cards__more more">
             <Link
               onClick={windowStartScrol}
-              to="/service-hospital"
+              to="/vaccination-and-chipping"
               class="more__text-link"
             >
               ПОДРОБНЕЕ
             </Link>
             <Link
               onClick={windowStartScrol}
-              to="/service-hospital"
+              to="/vaccination-and-chipping"
               class="more__img-link"
             >
               <img src={moreIcon} alt="" />
@@ -469,32 +469,7 @@ const Service = () => {
             </Link>
           </div>
         </div>
-        <div className="block_service">
-          <div class="advantages-cards__title">
-            !!!Уход за новорожденными!!!
-          </div>
-          <div class="advantages-cards__desctription">
-            Мы предлагаем широкий спектр услуг ортопедии, включая диагностику,
-            консервативное лечение, хирургические вмешательства и
-            послеоперационную реабилитацию.
-          </div>
-          <div class="advantages-cards__more more">
-            <Link
-              onClick={windowStartScrol}
-              to="/service-castration"
-              class="more__text-link"
-            >
-              ПОДРОБНЕЕ
-            </Link>
-            <Link
-              onClick={windowStartScrol}
-              to="/service-castration"
-              class="more__img-link"
-            >
-              <img src={moreIcon} alt="" />
-            </Link>
-          </div>
-        </div>
+        
         <div className="block_service blockFake"></div>
         <div className="block_service blockFake"></div>
       </div>

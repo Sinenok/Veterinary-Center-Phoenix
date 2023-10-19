@@ -225,6 +225,11 @@ const Header = ({
                             Кардиология
                         </Link>
                       </li>
+                      <li className="dropdown-list__item">
+                        <Link to="/vaccination-and-chipping">
+                        Вакцинация и чипирование
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                 )}

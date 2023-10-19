@@ -2673,6 +2673,9 @@ body {
     /* border: 2px solid black; */
     padding: 0 10px;
   }
+  .fotoright{
+    margin-left: 6%;
+  }
   .team__item {
     flex-basis: 50%;
   }

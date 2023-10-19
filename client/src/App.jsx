@@ -24,6 +24,10 @@ function App() {
     about: "Кардиология",
     },
     {
+        path: "/vaccination-and-chipping",
+        about: "Вакцинация и чипирование",
+    },
+    {
       path: "/service-dermatology",
       about: "Дерматология",
     },
