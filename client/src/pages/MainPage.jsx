@@ -281,7 +281,7 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
           </div>
         </div>
         <div className="card-services__img-wrap">
-          <img className="card-services-img" src={devCat2} alt="" />
+          <img id="mobile-cat" className="card-services-img" src={devCat2} alt="" />
         </div>
         <div className="card-services__wrapper">
           <div className="card-services__title">Неонатология</div>
