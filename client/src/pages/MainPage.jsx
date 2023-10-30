@@ -18,7 +18,7 @@ import coment4 from "./../img/main-page/reviews/comment4.png";
 import coment8 from "./../img/main-page/reviews/5HLWqjv-PY4.jpg";
 import coment7 from "./../img/main-page/reviews/pcJhdKLNaqo.jpg";
 import coment6 from "./../img/main-page/reviews/-91w_yzpsCsJ-cDFLUDVGR5r_n52iuPAOfxETeYuYUPYOx_XoYT1G33ZCQbpkpv2_F3yAWUHY-zwPDYz8-eQym9K.jpg";
-import coment5 from "./../img/main-page/reviews/qwMS8N3slgU.png";
+import coment5 from "./../img/main-page/reviews/0000000000000tml_m274f1798.jpg";
 import iconPaw2 from "./../img/main-page/reviews/paw2.svg";
 import prepCircle from "./../img/main-page/preparation-for-the-reception/prepCircle.svg";
 import stepUp from "./../img/main-page/preparation-for-the-reception/stepUp.svg";
@@ -384,7 +384,7 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
                   <div className="advantages-title">ГРУМИНГ</div>
                   <div className="advantages-text">
                     Наш грумер имеет большой опыт работы со всеми породами собак
-                    и обладают глубокими знаниями о требованиях каждой породы в
+                    и обладает глубокими знаниями о требованиях каждой породы в
                     отношении ухода за шерстью. Бережное и трепетное отношение к
                     каждому пациенту – наше кредо!
                   </div>
@@ -418,7 +418,7 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
                 <div className="advantages-title-device">ГРУМИНГ</div>
                 <div className="advantages-text-device">
                   Наш грумер имеет большой опыт работы со всеми породами собак и
-                  обладают глубокими знаниями о требованиях каждой породы в
+                  обладает глубокими знаниями о требованиях каждой породы в
                   отношении ухода за шерстью. Бережное и трепетное отношение к
                   каждому пациенту – наше кредо!
                 </div>
@@ -826,11 +826,13 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
                 <div className="number-device">5</div>
                 <div className="preparation-steps__info-device">
                   <div className="preparation-steps__title-device">
-                    Не кормите животное перед приемом
+                    Не бойтесь говорить правду
                   </div>
                   <div className="preparation-steps__subtitle-device">
-                    Возьмите с собой намордник и поводок или переноску для
-                    небольших животных.
+                    Даже если вы где-то недоглядели за
+                    питомцем или совершили ошибку.
+                    Иначе диагноз может быть поставлен
+                    неверно и лечение не сработает
                   </div>
                 </div>
               </div>

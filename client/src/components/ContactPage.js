@@ -10,6 +10,7 @@ import FormSubmit from "./FormSubmit";
 function ContactPage() {
   const about = "Контакты";
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isIncomplete, setisIncomplete] = useState(false);
   const [formData, setFormData] = useState({
     recordName: "",
     recordPhone: "",
@@ -52,6 +53,12 @@ function ContactPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log(formData.recordPhone.length);
+    
+    if (formData.recordPhone.length !== 15) {
+        setisIncomplete(true); // Устанавливаем состояние для отображения предупреждения
+        return;
+      }
     try {
       const response = await fetch("https://new.vetfenix.ru/api/formback/", {
         method: "POST",
@@ -157,6 +164,11 @@ function ContactPage() {
                       onChange={handleInputChange}
                     />
                     <label className="record-label">Номер телефона</label>
+                    <div className="warning-message">
+                    {isIncomplete && (
+                        <p>Пожалуйста, введите полный номер телефона.</p>
+                    )}
+                    </div>  
                   </div>
                   <div className="record__input-group">
                     <input
