@@ -80,7 +80,7 @@ const PriseList = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("https://new.vetfenix.ru/api/price_list")
+    fetch("https://vetfenix.ru/api/price_list")
       .then((response) => response.json())
       .then((jsonData) => {
         console.log(jsonData);

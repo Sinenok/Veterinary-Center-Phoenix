@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-k1_91l_9e5exz&fvfh7q@iy9+s#p6#4g_#apg&5mw8(aozl^8z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','vetfenix.ru']
 
 
 # Application definition
@@ -127,6 +127,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',  # Укажите домен вашего React-приложения
 ]
-
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+    "http://vetfenix.ru",
+]
+CORS_ALLOW_METHODS = [
+    'GET',
+    'POST',
+    # Другие HTTP методы
+]
+CORS_ALLOW_HEADERS = [
+    'Content-Type',
+    'Accept',
+    # Другие заголовки, которые вы хотите разрешить
+]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

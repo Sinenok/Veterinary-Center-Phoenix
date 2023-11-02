@@ -14,7 +14,7 @@ const Specialists = ({ setTakeSpecialists, counted }) => {
   const [specialists, setSpecialists] = useState(null);
 
   useEffect(() => {
-    fetch("https://new.vetfenix.ru/api/specialists")
+    fetch("https://vetfenix.ru/api/specialists")
       .then((response) => response.json())
       .then((jsonData) => {
         // console.log(jsonData);

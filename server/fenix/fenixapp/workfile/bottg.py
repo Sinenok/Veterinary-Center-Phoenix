@@ -47,7 +47,7 @@ def handle_photo(message):
         request = HttpRequest()
         request.META['HTTP_HOST'] = '127.0.0.1:8000'
 
-        absolute_url = request.build_absolute_uri(photo_url)
+        absolute_url = request.build_absolute_uri(photo_url).replace("http://127.0.0.1:8000","https://vetfenix.ru")
 
         bot.send_message(chat_id, f"Фото сохранено. URL фото: \n{absolute_url}")
     else:

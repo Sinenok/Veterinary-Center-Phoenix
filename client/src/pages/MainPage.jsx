@@ -28,6 +28,8 @@ import mainMap from "./../img/main-page/map-contact.png";
 import birdLogo from "./../img/main-page/birdLogo.svg";
 import textLogo from "./../img/main-page/text-logo.svg";
 import vkIcon from "./../img/main-page/vk-icon.svg";
+import newCat from "./../img/main-page/device card-services/2d9b810b-b75a-460a-88fb-95d011f3020d.png"
+import newDog2 from "./../img/main-page/device card-services/81b29003-e0fd-4674-a926-2b624f4224f1.png"
 import devCat1 from "./../img/main-page/device card-services/devCat1.jpg";
 import devCat2 from "./../img/main-page/device card-services/devCat2.jpg";
 import devCat3 from "./../img/main-page/device card-services/devCat3.jpg";
@@ -203,7 +205,7 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
           </div>
         </div>
         <div className="card-services__img-wrap">
-          <img className="card-services-img" src={devCat1} alt="" />
+          <img className="card-services-img" src={newCat} alt="" />
         </div>
         <div className="card-services__wrapper">
           <div className="card-services__title">Ортопедия</div>
@@ -281,7 +283,7 @@ const MainPage = ({ buttonClick, setButtonClick }) => {
           </div>
         </div>
         <div className="card-services__img-wrap">
-          <img id="mobile-cat" className="card-services-img" src={devCat2} alt="" />
+          <img id="mobile-cat" className="card-services-img" src={newDog2} alt="" />
         </div>
         <div className="card-services__wrapper">
           <div className="card-services__title">Неонатология</div>
