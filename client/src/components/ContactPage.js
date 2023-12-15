@@ -60,7 +60,7 @@ function ContactPage() {
         return;
       }
     try {
-      const response = await fetch("https://new.vetfenix.ru/api/formback/", {
+      const response = await fetch("https://vetfenix.ru/api/formback/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

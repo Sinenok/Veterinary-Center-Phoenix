@@ -51,9 +51,9 @@ const MainForm = () => {
     if (formData.recordPhone.length !== 15) {
         setisIncomplete(true); // Устанавливаем состояние для отображения предупреждения
         return;
-      }
+      } 
     try {
-      const response = await fetch("https://new.vetfenix.ru/api/formback/", {
+      const response = await fetch("https://vetfenix.ru/api/formback/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
